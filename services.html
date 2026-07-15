@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Noventra - Our Expertise</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Geist:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#ccc3d7",
+                    "tertiary-fixed-dim": "#ccbeff",
+                    "on-primary-fixed-variant": "#5b00c5",
+                    "on-tertiary-fixed-variant": "#4a3d7c",
+                    "outline": "#7b7486",
+                    "primary": "#5300b7",
+                    "inverse-primary": "#d3bbff",
+                    "surface-container": "#eaedff",
+                    "on-error-container": "#93000a",
+                    "inverse-surface": "#283044",
+                    "on-primary-container": "#dac5ff",
+                    "surface": "#faf8ff",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#c7c5d1",
+                    "secondary-fixed": "#e3e1ed",
+                    "secondary": "#5d5d67",
+                    "surface-variant": "#dae2fd",
+                    "on-secondary": "#ffffff",
+                    "background": "#faf8ff",
+                    "surface-dim": "#d2d9f4",
+                    "primary-container": "#6d28d9",
+                    "primary-fixed-dim": "#d3bbff",
+                    "error": "#ba1a1a",
+                    "surface-container-low": "#f2f3ff",
+                    "tertiary": "#443776",
+                    "on-surface-variant": "#4a4455",
+                    "on-surface": "#131b2e",
+                    "primary-fixed": "#ebddff",
+                    "on-primary-fixed": "#250059",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-highest": "#dae2fd",
+                    "on-tertiary-container": "#d4c8ff",
+                    "on-background": "#131b2e",
+                    "tertiary-fixed": "#e7deff",
+                    "on-tertiary-fixed": "#1e0e4e",
+                    "error-container": "#ffdad6",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-container": "#5c4f8f",
+                    "on-secondary-fixed-variant": "#46464f",
+                    "secondary-container": "#e3e1ed",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#eef0ff",
+                    "on-secondary-fixed": "#1a1b23",
+                    "surface-tint": "#7331df",
+                    "surface-container-high": "#e2e7ff",
+                    "surface-bright": "#faf8ff",
+                    "on-secondary-container": "#64636d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "xs": "4px",
+                    "xl": "32px",
+                    "xxl": "64px",
+                    "md": "16px",
+                    "gutter": "24px",
+                    "sm": "8px",
+                    "unit": "4px",
+                    "lg": "24px"
+            },
+            "fontFamily": {
+                    "body-sm": ["Inter"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-lg-mobile": ["Geist"],
+                    "headline-md": ["Geist"],
+                    "display-lg": ["Geist"],
+                    "label-sm": ["Geist"],
+                    "label-md": ["Geist"],
+                    "headline-lg": ["Geist"]
+            },
+            "fontSize": {
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .service-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 40px -10px rgba(83, 0, 183, 0.1);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary/20">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-on-surface/80 backdrop-blur-xl border-b border-surface-variant/30 shadow-sm">
+<div class="flex justify-between items-center h-16 px-gutter max-w-container-max mx-auto">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary text-headline-md" data-icon="rocket_launch">rocket_launch</span>
+<span class="text-headline-md font-headline-md font-bold tracking-tight text-primary">Noventra</span>
+</div>
+<nav class="hidden md:flex items-center gap-xl">
+<a class="text-primary font-semibold border-b-2 border-primary py-1 font-label-md text-label-md" href="#">Services</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-label-md text-label-md" href="#">Portfolio</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-label-md text-label-md" href="#">About Us</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-label-md text-label-md" href="#">Insights</a>
+</nav>
+<button class="bg-primary-container text-on-primary font-label-md text-label-md px-lg py-sm rounded-lg hover:opacity-90 active:scale-95 transition-all">
+                Get Started
+            </button>
+</div>
+</header>
+<main class="pt-xxl min-h-screen">
+<!-- Hero Section / Header -->
+<section class="px-gutter pt-xxl pb-xl max-w-container-max mx-auto text-center">
+<div class="inline-flex items-center px-sm py-xs bg-primary/10 rounded-full mb-md">
+<span class="text-primary font-label-sm text-label-sm px-sm">EXPERTISE &amp; INNOVATION</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg md:text-display-lg md:font-display-lg text-on-surface mb-md">
+                Our Expertise
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                Scalable solutions engineered for the modern enterprise. We bridge the gap between technical complexity and business velocity.
+            </p>
+</section>
+<!-- Services Grid -->
+<section class="px-gutter pb-xxl max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-xl">
+<!-- Service Card: Website Development -->
+<div class="service-card group bg-surface-container-lowest border border-outline-variant/30 p-lg rounded-xl flex flex-col h-full">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-lg group-hover:bg-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary transition-colors duration-300" data-icon="web">web</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-sm">Website Development</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-xl flex-grow">
+                        High-performance marketing websites optimized for conversion, SEO, and lightning-fast loading speeds across all devices.
+                    </p>
+<div class="pt-lg border-t border-outline-variant/20 flex flex-col gap-md">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Starting from</span>
+<span class="font-headline-md text-headline-md text-primary">$2,500</span>
+</div>
+<button class="w-full py-sm border border-primary text-primary font-label-md text-label-md rounded-lg hover:bg-primary hover:text-white transition-all duration-300">
+                            Learn More
+                        </button>
+</div>
+</div>
+<!-- Service Card: Web Applications -->
+<div class="service-card group bg-surface-container-lowest border border-outline-variant/30 p-lg rounded-xl flex flex-col h-full">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-lg group-hover:bg-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary transition-colors duration-300" data-icon="data_object">data_object</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-sm">Web Applications</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-xl flex-grow">
+                        Complex SaaS platforms and custom internal tools built with robust architectures to handle scale and secure data management.
+                    </p>
+<div class="pt-lg border-t border-outline-variant/20 flex flex-col gap-md">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Starting from</span>
+<span class="font-headline-md text-headline-md text-primary">$7,500</span>
+</div>
+<button class="w-full py-sm border border-primary text-primary font-label-md text-label-md rounded-lg hover:bg-primary hover:text-white transition-all duration-300">
+                            Learn More
+                        </button>
+</div>
+</div>
+<!-- Service Card: Hosting -->
+<div class="service-card group bg-surface-container-lowest border border-outline-variant/30 p-lg rounded-xl flex flex-col h-full">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-lg group-hover:bg-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary transition-colors duration-300" data-icon="dns">dns</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-sm">Hosting</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-xl flex-grow">
+                        Fully managed, enterprise-grade hosting solutions with 99.9% uptime guarantee and daily automated backups for peace of mind.
+                    </p>
+<div class="pt-lg border-t border-outline-variant/20 flex flex-col gap-md">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Starting from</span>
+<span class="font-headline-md text-headline-md text-primary">$49/mo</span>
+</div>
+<button class="w-full py-sm border border-primary text-primary font-label-md text-label-md rounded-lg hover:bg-primary hover:text-white transition-all duration-300">
+                            Learn More
+                        </button>
+</div>
+</div>
+<!-- Service Card: Cloud Solutions -->
+<div class="service-card group bg-surface-container-lowest border border-outline-variant/30 p-lg rounded-xl flex flex-col h-full">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-lg group-hover:bg-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary transition-colors duration-300" data-icon="cloud_done">cloud_done</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-sm">Cloud Solutions</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-xl flex-grow">
+                        Infrastructure modernization via AWS, Azure, or GCP. Optimize your cloud spend and improve system reliability through DevOps.
+                    </p>
+<div class="pt-lg border-t border-outline-variant/20 flex flex-col gap-md">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Starting from</span>
+<span class="font-headline-md text-headline-md text-primary">$4,000</span>
+</div>
+<button class="w-full py-sm border border-primary text-primary font-label-md text-label-md rounded-lg hover:bg-primary hover:text-white transition-all duration-300">
+                            Learn More
+                        </button>
+</div>
+</div>
+<!-- Service Card: Branding -->
+<div class="service-card group bg-surface-container-lowest border border-outline-variant/30 p-lg rounded-xl flex flex-col h-full">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-lg group-hover:bg-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary transition-colors duration-300" data-icon="architecture">architecture</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-sm">Branding</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-xl flex-grow">
+                        Visual identity systems designed for the digital age. We create logos, design systems, and brand guidelines that resonate.
+                    </p>
+<div class="pt-lg border-t border-outline-variant/20 flex flex-col gap-md">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Starting from</span>
+<span class="font-headline-md text-headline-md text-primary">$3,200</span>
+</div>
+<button class="w-full py-sm border border-primary text-primary font-label-md text-label-md rounded-lg hover:bg-primary hover:text-white transition-all duration-300">
+                            Learn More
+                        </button>
+</div>
+</div>
+<!-- Service Card: Technical Consulting -->
+<div class="service-card group bg-surface-container-lowest border border-outline-variant/30 p-lg rounded-xl flex flex-col h-full">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-lg group-hover:bg-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary transition-colors duration-300" data-icon="psychology">psychology</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-sm">Technical Consulting</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-xl flex-grow">
+                        Expert guidance on stack selection, architectural audits, and digital transformation roadmaps tailored to your goals.
+                    </p>
+<div class="pt-lg border-t border-outline-variant/20 flex flex-col gap-md">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Starting from</span>
+<span class="font-headline-md text-headline-md text-primary">$150/hr</span>
+</div>
+<button class="w-full py-sm border border-primary text-primary font-label-md text-label-md rounded-lg hover:bg-primary hover:text-white transition-all duration-300">
+                            Learn More
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-gutter pb-xxl max-w-container-max mx-auto">
+<div class="relative overflow-hidden rounded-xxl bg-primary-container p-xl md:p-xxl">
+<div class="relative z-10 max-w-2xl">
+<h2 class="font-headline-lg text-headline-lg text-white mb-md">Ready to accelerate your digital growth?</h2>
+<p class="font-body-lg text-body-lg text-on-primary-container mb-lg">
+                        Our team of experts is ready to transform your technical challenges into competitive advantages.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-md">
+<button class="px-xl py-md bg-white text-primary font-label-md text-label-md rounded-lg hover:bg-surface-container transition-all">
+                            Schedule a Consultation
+                        </button>
+<button class="px-xl py-md border border-white/30 text-white font-label-md text-label-md rounded-lg hover:bg-white/10 transition-all">
+                            View Case Studies
+                        </button>
+</div>
+</div>
+<!-- Decorative element -->
+<div class="absolute -right-20 -top-20 w-96 h-96 bg-primary rounded-full blur-3xl opacity-50"></div>
+<div class="absolute -left-20 -bottom-20 w-64 h-64 bg-tertiary rounded-full blur-3xl opacity-30"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-xl px-gutter py-xxl max-w-container-max mx-auto">
+<div class="flex flex-col gap-md">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary text-headline-md" data-icon="rocket_launch">rocket_launch</span>
+<span class="text-headline-md font-headline-md font-bold text-primary">Noventra</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant pr-md">
+                    Engineering premium digital experiences with precision, reliability, and innovative craftsmanship.
+                </p>
+</div>
+<div class="flex flex-col gap-sm">
+<h4 class="font-label-md text-label-md text-on-surface mb-xs">Services</h4>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">Website Development</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">Cloud Engineering</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">Enterprise Apps</a>
+</div>
+<div class="flex flex-col gap-sm">
+<h4 class="font-label-md text-label-md text-on-surface mb-xs">Company</h4>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">About Us</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">Careers</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all" href="#">Privacy Policy</a>
+</div>
+<div class="flex flex-col gap-sm">
+<h4 class="font-label-md text-label-md text-on-surface mb-xs">Connect</h4>
+<div class="flex gap-md mb-sm">
+<a class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</a>
+<a class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</a>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    info@noventra.com<br/>
+                    +1 (555) 012-3456
+                </p>
+</div>
+</div>
+<div class="border-t border-outline-variant/30 py-lg px-gutter max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-md">
+<span class="font-body-sm text-body-sm text-on-surface-variant">© 2024 Noventra Solutions. All rights reserved.</span>
+<div class="flex gap-lg">
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary" href="#">Terms</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary" href="#">Cookies</a>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions and subtle scroll reveal
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.service-card');
+            
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add('opacity-100', 'translate-y-0');
+                            entry.target.classList.remove('opacity-0', 'translate-y-10');
+                        }, index * 100);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            cards.forEach(card => {
+                card.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700', 'ease-out');
+                observer.observe(card);
+            });
+        });
+    </script>
+</body></html>

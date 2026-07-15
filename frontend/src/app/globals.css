@@ -1,0 +1,207 @@
+@import "tailwindcss";
+
+@theme {
+  /* Theme colors matching Stitch Design System */
+  --color-outline-variant: #ccc3d7;
+  --color-tertiary-fixed-dim: #ccbeff;
+  --color-on-primary-fixed-variant: #5b00c5;
+  --color-on-tertiary-fixed-variant: #4a3d7c;
+  --color-outline: #7b7486;
+  --color-primary: #5300b7;
+  --color-inverse-primary: #d3bbff;
+  --color-surface-container: #eaedff;
+  --color-on-error-container: #93000a;
+  --color-inverse-surface: #283044;
+  --color-on-primary-container: #dac5ff;
+  --color-surface: #faf8ff;
+  --color-on-error: #ffffff;
+  --color-secondary-fixed-dim: #c7c5d1;
+  --color-secondary-fixed: #e3e1ed;
+  --color-secondary: #5d5d67;
+  --color-surface-variant: #dae2fd;
+  --color-on-secondary: #ffffff;
+  --color-background: #faf8ff;
+  --color-surface-dim: #d2d9f4;
+  --color-primary-container: #6d28d9;
+  --color-primary-fixed-dim: #d3bbff;
+  --color-error: #ba1a1a;
+  --color-surface-container-low: #f2f3ff;
+  --color-tertiary: #443776;
+  --color-on-surface-variant: #4a4455;
+  --color-on-surface: #131b2e;
+  --color-primary-fixed: #ebddff;
+  --color-on-primary-fixed: #250059;
+  --color-on-tertiary: #ffffff;
+  --color-surface-container-highest: #dae2fd;
+  --color-on-tertiary-container: #d4c8ff;
+  --color-on-background: #131b2e;
+  --color-tertiary-fixed: #e7deff;
+  --color-on-tertiary-fixed: #1e0e4e;
+  --color-error-container: #ffdad6;
+  --color-surface-container-lowest: #ffffff;
+  --color-tertiary-container: #5c4f8f;
+  --color-on-secondary-fixed-variant: #46464f;
+  --color-secondary-container: #e3e1ed;
+  --color-on-primary: #ffffff;
+  --color-inverse-on-surface: #eef0ff;
+  --color-on-secondary-fixed: #1a1b23;
+  --color-surface-tint: #7331df;
+  --color-surface-container-high: #e2e7ff;
+  --color-surface-bright: #faf8ff;
+  --color-on-secondary-container: #64636d;
+
+  /* Custom spacings */
+  --spacing-container-max: 1280px;
+
+
+  /* Custom Border Radius */
+  --radius-DEFAULT: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-full: 9999px;
+}
+
+@layer base {
+  body {
+    background-color: #faf8ff;
+    color: #131b2e;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Custom typography typography helper classes from Stitch */
+.font-body-sm {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+.font-body-md {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+.font-body-lg {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+.font-headline-lg-mobile {
+  font-family: 'Geist', sans-serif;
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+.font-headline-md {
+  font-family: 'Geist', sans-serif;
+  font-size: 24px;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+.font-display-lg {
+  font-family: 'Geist', sans-serif;
+  font-size: 64px;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  font-weight: 700;
+}
+.font-label-sm {
+  font-family: 'Geist', sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+.font-label-md {
+  font-family: 'Geist', sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+.font-headline-lg {
+  font-family: 'Geist', sans-serif;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+/* Custom component styles */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+}
+.hero-gradient {
+  background: radial-gradient(circle at 50% 50%, rgba(109, 40, 217, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
+}
+.custom-scrollbar::-webkit-scrollbar {
+  height: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #ccc3d7;
+  border-radius: 10px;
+}
+.glass-panel {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.5);
+}
+
+/* Custom spacing utilities compatibility layer */
+@utility px-gutter {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+@utility py-xxl {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+@utility pt-xxl {
+  padding-top: 64px;
+}
+@utility pb-xxl {
+  padding-bottom: 64px;
+}
+@utility pb-xl {
+  padding-bottom: 32px;
+}
+@utility p-xl {
+  padding: 32px;
+}
+@utility p-xxl {
+  padding: 64px;
+}
+@utility px-xxl {
+  padding-left: 64px;
+  padding-right: 64px;
+}
+@utility mb-xxl {
+  margin-bottom: 64px;
+}
+@utility gap-xl {
+  gap: 32px;
+}
+@utility gap-md {
+  gap: 16px;
+}
+@utility mb-md {
+  margin-bottom: 16px;
+}
+@utility py-md {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+@utility px-sm {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+@utility py-xs {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+

@@ -1,0 +1,955 @@
+My Architecture Choice
+Frontend
+Next.js 15 (App Router)
+React 19
+TypeScript
+Tailwind CSS v4
+shadcn/ui
+Framer Motion
+React Hook Form + Zod
+TanStack Query
+GSAP (for premium animations where needed)
+Backend
+
+Since you already know Python:
+
+FastAPI
+
+Why?
+
+Very fast
+Easy REST APIs
+Excellent documentation
+Async support
+Easy authentication
+Great for future AI integrations
+Database
+
+PostgreSQL
+
+Not MongoDB.
+
+Reasons:
+
+Agencies have relational data.
+Customers
+Projects
+Payments
+Contracts
+Tickets
+Blogs
+Employees
+Roles
+
+PostgreSQL handles this beautifully.
+
+Use
+
+Prisma ORM
+
+or
+
+SQLAlchemy
+
+Cache
+
+Redis
+
+For
+
+Sessions
+OTP
+Email verification
+Dashboard caching
+Analytics
+Authentication
+
+JWT Access Token
+
+Refresh Token
+
+Google Login
+
+GitHub Login
+
+Email Login
+
+Forgot Password
+
+Email Verification
+
+2FA Ready
+
+RBAC (Role Based Access Control)
+
+Roles
+
+Visitor
+
+Customer
+
+Employee
+
+Project Manager
+
+Admin
+
+Super Admin
+
+Website Structure
+/
+├── Home
+├── About
+├── Services
+├── Portfolio
+├── Live Demo
+├── Pricing
+├── Sale
+├── Clients
+├── Testimonials
+├── Blog
+├── Careers
+├── Contact
+├── FAQ
+├── Privacy
+├── Terms
+├── Refund Policy
+├── Cookie Policy
+├── Sitemap
+├── Customer Portal
+├── Login
+└── Register
+Admin Dashboard
+
+The most important part.
+
+Everything editable.
+
+Dashboard
+
+Analytics
+
+Users
+
+Customers
+
+Projects
+
+Portfolio
+
+Services
+
+Categories
+
+Testimonials
+
+Blogs
+
+Career
+
+Invoices
+
+Payments
+
+Tickets
+
+Chat
+
+Website Settings
+
+Homepage Builder
+
+Navigation Builder
+
+SEO
+
+Media Library
+
+Forms
+
+Offers
+
+Coupons
+
+Popup Manager
+
+Email Templates
+
+Roles
+
+Permissions
+
+Logs
+
+API Keys
+
+Backup
+
+Theme
+
+Footer
+
+Header
+
+Announcement Bar
+Homepage
+
+Hero Section
+
+Animated Background
+
+CTA
+
+Book Consultation
+
+Services
+
+Cards
+
+Featured Projects
+
+Beautiful carousel
+
+Current Offers
+
+Example
+
+Flat 30% OFF
+
+Countdown Timer
+
+Editable
+
+Live Statistics
+
+200+
+
+Projects
+
+95%
+
+Client Satisfaction
+
+24/7
+
+Support
+
+12
+
+Countries
+
+Testimonials
+
+Technologies
+
+React
+
+Next
+
+Python
+
+FastAPI
+
+Docker
+
+AWS
+
+Vercel
+
+Cloudflare
+
+Process
+
+Requirement
+
+↓
+
+Design
+
+↓
+
+Development
+
+↓
+
+Testing
+
+↓
+
+Deployment
+
+↓
+
+Support
+
+Latest Blogs
+
+Contact CTA
+
+Services Page
+
+Each service has
+
+Image
+
+Description
+
+Pricing
+
+FAQs
+
+Timeline
+
+Technologies
+
+Related Projects
+
+Book Button
+
+Portfolio
+
+Categories
+
+Corporate
+
+Restaurant
+
+Doctors
+
+School
+
+NGO
+
+Startup
+
+E-commerce
+
+Landing Page
+
+Filters
+
+Search
+
+Tags
+
+Each Project
+
+Gallery
+
+Video
+
+Tech Stack
+
+Duration
+
+Features
+
+Client Review
+
+Preview Button
+
+GitHub (Optional)
+
+Case Study
+
+Live Demo
+
+This is amazing for sales.
+
+Each demo
+
+Screenshot
+
+Preview
+
+Features
+
+Technology
+
+Admin Login (optional)
+
+Examples
+
+Doctor Website
+
+Restaurant
+
+Gym
+
+Furniture
+
+Lawyer
+
+School
+
+Cafe
+
+Hotel
+
+Salon
+
+Real Estate
+
+Customer Portal
+
+This makes you look like a professional agency.
+
+Customer logs in
+
+Can see
+
+Projects
+
+Invoices
+
+Messages
+
+Support
+
+Progress
+
+Downloads
+
+Contracts
+
+Hosting
+
+Domain
+
+Renewals
+
+Project Progress
+
+Requirement
+
+██████████
+
+100%
+
+Design
+
+███████
+
+70%
+
+Development
+
+████
+
+40%
+
+Testing
+
+██
+
+20%
+
+Deployment
+
+Pending
+
+Admin updates progress.
+
+Customer sees live.
+
+Support Center
+
+Live Chat
+
+Ticket System
+
+FAQs
+
+Knowledge Base
+
+Call Request
+
+Email
+
+WhatsApp
+
+Blog
+
+Categories
+
+SEO
+
+Programming
+
+Hosting
+
+Cloud
+
+Business
+
+AI
+
+Marketing
+
+Admin can
+
+Create
+
+Schedule
+
+Publish
+
+Draft
+
+SEO
+
+Tags
+
+Images
+
+Careers
+
+Open Positions
+
+Apply
+
+Resume Upload
+
+Status
+
+Contact
+
+Google Map
+
+Office
+
+Email
+
+Phone
+
+WhatsApp
+
+Business Hours
+
+Contact Form
+
+Sale Page
+
+Example
+
+Summer Sale
+
+Flat 30%
+
+Editable
+
+Countdown
+
+Coupon
+
+CTA
+
+SEO
+
+Everything editable
+
+Title
+
+Description
+
+Keywords
+
+OpenGraph
+
+Twitter Card
+
+Canonical
+
+Robots
+
+Sitemap
+
+Structured Data
+
+Media Library
+
+Upload
+
+Image
+
+Video
+
+PDF
+
+ZIP
+
+Icons
+
+Delete
+
+Rename
+
+Compress
+
+Folders
+
+Website Builder
+
+Admin can edit
+
+Homepage Sections
+
+Order
+
+Visibility
+
+Text
+
+Buttons
+
+Images
+
+Videos
+
+Icons
+
+Background
+
+Colors
+
+Without touching code.
+
+APIs
+Auth
+
+Users
+
+Customers
+
+Projects
+
+Portfolio
+
+Services
+
+Blogs
+
+Testimonials
+
+Contact
+
+Career
+
+Support
+
+Progress
+
+Invoices
+
+Payments
+
+Analytics
+
+Offers
+
+Media
+
+Settings
+
+Notifications
+
+Emails
+
+Search
+
+Dashboard
+
+Chat
+
+FAQs
+Notifications
+
+Email
+
+SMS Ready
+
+Push Notifications
+
+In-app Notifications
+
+Integrations
+
+Google Analytics
+
+Google Search Console
+
+Cloudflare
+
+Stripe
+
+Razorpay
+
+PayPal
+
+GitHub
+
+Google Calendar
+
+WhatsApp
+
+SMTP
+
+Resend
+
+AWS S3
+
+Cloudinary
+
+Deployment
+
+Frontend
+
+Vercel
+
+Backend
+
+Railway
+
+or
+
+Hetzner VPS
+
+Database
+
+Neon PostgreSQL
+
+Storage
+
+Cloudinary
+
+Redis
+
+Upstash
+
+Folder Structure
+apps/
+    web/
+    admin/
+    api/
+
+packages/
+    ui/
+    types/
+    config/
+    utils/
+
+database/
+
+docker/
+
+docs/
+
+scripts/
+The Prompt I'd Give a Coding Agent
+You are a Senior Staff Software Engineer and Software Architect. Build a production-ready, enterprise-grade full-stack web application for "Noventra Solutions", a modern IT agency that provides website development, web applications, hosting, maintenance, cloud solutions, branding, and technical consulting.
+
+## Core Requirements
+
+Build the project using:
+- Next.js 15 (App Router)
+- React 19
+- TypeScript
+- Tailwind CSS v4
+- shadcn/ui
+- Framer Motion
+- FastAPI
+- PostgreSQL
+- Prisma (frontend ORM if applicable) or SQLAlchemy/Alembic on the backend
+- Redis
+- JWT Authentication with Refresh Tokens
+- Role-Based Access Control (RBAC)
+- Docker for local development
+- Clean Architecture with modular feature-based structure
+- REST APIs with OpenAPI documentation
+- Responsive, accessible (WCAG), SEO-friendly design
+
+## Frontend
+
+Create a premium SaaS-style UI inspired by Stripe, Linear, Vercel, Notion, and OpenAI. Use a purple-and-white brand theme for Noventra Solutions. The UI should be modern, fast, animated where appropriate, and fully responsive.
+
+Public pages:
+- Home
+- About
+- Services
+- Service Details
+- Portfolio
+- Portfolio Details / Case Studies
+- Live Demo Gallery
+- Pricing
+- Current Offers / Sales
+- Testimonials
+- Clients
+- Blog
+- Blog Details
+- Careers
+- Career Details
+- FAQ
+- Contact
+- Privacy Policy
+- Terms & Conditions
+- Refund Policy
+- Cookie Policy
+- Sitemap
+
+## Customer Portal
+
+Authenticated customers can:
+- View active projects
+- Track project progress with milestone percentages and timeline
+- View invoices and payment status
+- Download deliverables
+- Raise support tickets
+- Use real-time live chat
+- View contracts
+- View hosting and domain renewal information
+- Update profile and password
+- Receive notifications
+
+## Admin Dashboard
+
+Implement a complete CMS where every visible section of the website can be edited without modifying code.
+
+Modules:
+- Dashboard analytics
+- Users
+- Roles & Permissions
+- Customers
+- Projects
+- Portfolio
+- Services
+- Categories
+- Homepage Builder
+- Navigation Builder
+- Footer Builder
+- Blog CMS
+- Testimonials
+- Clients
+- Careers
+- Contact submissions
+- FAQs
+- Offers and countdown campaigns
+- Media Library
+- SEO Manager
+- Email Templates
+- Ticket Management
+- Live Chat Management
+- Notifications
+- Settings
+- Theme Management
+- API Keys
+- Activity Logs
+- Backup & Restore
+
+## APIs
+
+Create modular REST APIs for:
+Authentication
+Users
+Customers
+Projects
+Progress Tracking
+Portfolio
+Services
+Blog
+Testimonials
+Clients
+Careers
+Support Tickets
+Live Chat
+Invoices
+Payments
+Notifications
+Media
+Offers
+SEO
+Settings
+Analytics
+Search
+
+Implement consistent response formats, validation, pagination, filtering, sorting, and versioning.
+
+## Authentication
+
+- Email/password login
+- Google OAuth
+- GitHub OAuth
+- Email verification
+- Forgot password
+- Password reset
+- Refresh tokens
+- Session management
+- Future-ready for two-factor authentication
+
+## Database
+
+Design a normalized PostgreSQL schema covering:
+Users
+Roles
+Permissions
+Customers
+Projects
+Project Milestones
+Services
+Portfolio
+Blogs
+Categories
+Tags
+Testimonials
+Clients
+Offers
+Support Tickets
+Messages
+Notifications
+Invoices
+Payments
+Domains
+Hosting Plans
+Contracts
+Media
+Settings
+Audit Logs
+
+Use proper foreign keys, indexes, migrations, and seed data.
+
+## Error Handling
+
+Implement centralized error handling with structured JSON responses. Include:
+- Validation errors
+- Authentication and authorization errors
+- Resource not found
+- Rate limiting
+- Conflict errors
+- Internal server errors
+
+Use meaningful HTTP status codes and detailed error messages for both API and UI.
+
+## Additional Features
+
+- Global search
+- Dark and Light mode
+- Multi-language ready
+- File uploads
+- Image optimization
+- Lazy loading
+- Server-side rendering where appropriate
+- SEO optimization
+- XML sitemap
+- robots.txt
+- Open Graph metadata
+- Structured data (Schema.org)
+- Analytics dashboard
+- Contact forms with spam protection
+- Cookie consent
+- Accessibility compliance
+- Unit, integration, and end-to-end tests
+- CI/CD configuration
+- Docker Compose setup
+- Production deployment guide
+- Comprehensive documentation
+
+Generate clean, modular, scalable, production-quality code with comments only where necessary. Follow best practices for security, performance, maintainability, and extensibility. The application should be ready for long-term growth into a full digital agency platform.

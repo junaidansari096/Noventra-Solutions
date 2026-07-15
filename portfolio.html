@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Our Portfolio | Noventra Solutions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Geist:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#ccc3d7",
+                    "tertiary-fixed-dim": "#ccbeff",
+                    "on-primary-fixed-variant": "#5b00c5",
+                    "on-tertiary-fixed-variant": "#4a3d7c",
+                    "outline": "#7b7486",
+                    "primary": "#5300b7",
+                    "inverse-primary": "#d3bbff",
+                    "surface-container": "#eaedff",
+                    "on-error-container": "#93000a",
+                    "inverse-surface": "#283044",
+                    "on-primary-container": "#dac5ff",
+                    "surface": "#faf8ff",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#c7c5d1",
+                    "secondary-fixed": "#e3e1ed",
+                    "secondary": "#5d5d67",
+                    "surface-variant": "#dae2fd",
+                    "on-secondary": "#ffffff",
+                    "background": "#faf8ff",
+                    "surface-dim": "#d2d9f4",
+                    "primary-container": "#6d28d9",
+                    "primary-fixed-dim": "#d3bbff",
+                    "error": "#ba1a1a",
+                    "surface-container-low": "#f2f3ff",
+                    "tertiary": "#443776",
+                    "on-surface-variant": "#4a4455",
+                    "on-surface": "#131b2e",
+                    "primary-fixed": "#ebddff",
+                    "on-primary-fixed": "#250059",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-highest": "#dae2fd",
+                    "on-tertiary-container": "#d4c8ff",
+                    "on-background": "#131b2e",
+                    "tertiary-fixed": "#e7deff",
+                    "on-tertiary-fixed": "#1e0e4e",
+                    "error-container": "#ffdad6",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-container": "#5c4f8f",
+                    "on-secondary-fixed-variant": "#46464f",
+                    "secondary-container": "#e3e1ed",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#eef0ff",
+                    "on-secondary-fixed": "#1a1b23",
+                    "surface-tint": "#7331df",
+                    "surface-container-high": "#e2e7ff",
+                    "surface-bright": "#faf8ff",
+                    "on-secondary-container": "#64636d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "xs": "4px",
+                    "xl": "32px",
+                    "xxl": "64px",
+                    "md": "16px",
+                    "gutter": "24px",
+                    "sm": "8px",
+                    "unit": "4px",
+                    "lg": "24px"
+            },
+            "fontFamily": {
+                    "body-sm": ["Inter"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-lg-mobile": ["Geist"],
+                    "headline-md": ["Geist"],
+                    "display-lg": ["Geist"],
+                    "label-sm": ["Geist"],
+                    "label-md": ["Geist"],
+                    "headline-lg": ["Geist"]
+            },
+            "fontSize": {
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .portfolio-card:hover .project-overlay {
+            opacity: 1;
+        }
+        .filter-btn.active {
+            background-color: #5300b7;
+            color: #ffffff;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-on-surface/80 backdrop-blur-xl shadow-sm border-b border-surface-variant/30">
+<div class="flex justify-between items-center h-16 px-gutter max-w-container-max mx-auto">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary dark:text-inverse-primary" data-icon="rocket_launch">rocket_launch</span>
+<span class="text-headline-md font-headline-md font-bold tracking-tight text-primary dark:text-inverse-primary">Noventra</span>
+</div>
+<nav class="hidden md:flex items-center gap-xl">
+<a class="text-on-surface-variant dark:text-on-surface-variant/80 font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-300" href="#">Services</a>
+<a class="text-primary dark:text-inverse-primary font-semibold border-b-2 border-primary hover:text-primary dark:hover:text-inverse-primary transition-colors duration-300" href="#">Portfolio</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant/80 font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-300" href="#">About Us</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant/80 font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-300" href="#">Insights</a>
+</nav>
+<button class="bg-primary-container text-on-primary px-lg py-sm rounded-full font-label-md hover:opacity-90 active:scale-95 transition-all">
+                Get Started
+            </button>
+</div>
+</header>
+<main class="pt-xxl">
+<!-- Hero Section -->
+<section class="px-gutter py-xxl text-center max-w-container-max mx-auto">
+<div class="inline-flex items-center gap-xs px-md py-xs bg-surface-container-low rounded-full mb-md border border-outline-variant/30">
+<span class="material-symbols-outlined text-[18px] text-primary" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-label-sm text-on-surface-variant uppercase tracking-widest">Case Studies</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg md:font-display-lg md:text-display-lg text-on-surface mb-md">Our Portfolio</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                Explore our curated collection of digital experiences, where precision engineering meets innovative design to solve complex business challenges.
+            </p>
+</section>
+<!-- Filter Gallery Section -->
+<section class="px-gutter pb-xxl max-w-container-max mx-auto">
+<!-- Filter Bar -->
+<div class="flex flex-wrap items-center justify-center gap-sm mb-xl">
+<button class="filter-btn active px-lg py-sm rounded-full border border-outline-variant font-label-md transition-all hover:border-primary" onclick="filterPortfolio('all')">All Projects</button>
+<button class="filter-btn px-lg py-sm rounded-full border border-outline-variant font-label-md transition-all hover:border-primary" onclick="filterPortfolio('Corporate')">Corporate</button>
+<button class="filter-btn px-lg py-sm rounded-full border border-outline-variant font-label-md transition-all hover:border-primary" onclick="filterPortfolio('E-commerce')">E-commerce</button>
+<button class="filter-btn px-lg py-sm rounded-full border border-outline-variant font-label-md transition-all hover:border-primary" onclick="filterPortfolio('Startup')">Startup</button>
+<button class="filter-btn px-lg py-sm rounded-full border border-outline-variant font-label-md transition-all hover:border-primary" onclick="filterPortfolio('Tech')">Tech</button>
+</div>
+<!-- Bento Grid Portfolio -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg" id="portfolio-grid">
+<!-- Project 1 (Corporate) -->
+<div class="portfolio-item group relative overflow-hidden rounded-xl bg-white border border-surface-variant shadow-sm hover:shadow-xl transition-all duration-500" data-category="Corporate">
+<div class="aspect-[4/3] relative overflow-hidden">
+<img class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110" data-alt="A sophisticated corporate headquarters website presentation on a clean glass tablet. The design features sharp typography, deep navy blue and silver accents, and a sense of institutional reliability. Soft professional office lighting reflects off the screen in a bright, modern light-mode studio environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCk1zyrHOh7_SSQOm0_Ax6d3b_NGz8SE5uwy0AVj-sZUp7b9rrihRsfyi0Gmsz7Nt0bI9xkLG_FA4hrg_fu0H-YGWndlFIiOcLAG_tuG29G7XACPSjFfw0ztYqegTHcuWdBnz-pTfClfqWLb6POV416jZueIW4K8jp3LC74tuya-YCR2QdKnN-ofjI9GFaGFFNg0gu3lqNdrLgkh9VKSwEX3rs5XlPT8tQYcG4e2lqvs6vxk44HfjL9JQ"/>
+<div class="project-overlay absolute inset-0 bg-primary/20 opacity-0 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
+</div>
+</div>
+<div class="p-lg">
+<div class="flex items-center gap-sm mb-sm">
+<span class="px-sm py-xs bg-surface-container-low text-primary font-label-sm rounded-md uppercase tracking-wider">Corporate</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-sm">Nexus Global Banking</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-lg">Next-gen wealth management platform focused on transparency and security.</p>
+<a class="inline-flex items-center gap-sm text-primary font-label-md hover:underline" href="#">
+                            View Case Study <span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Project 2 (E-commerce) -->
+<div class="portfolio-item group relative overflow-hidden rounded-xl bg-white border border-surface-variant shadow-sm hover:shadow-xl transition-all duration-500" data-category="E-commerce">
+<div class="aspect-[4/3] relative overflow-hidden">
+<img class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110" data-alt="An elegant e-commerce interface for a premium fashion brand displayed on a sleek laptop. The UI emphasizes high-resolution product photography, minimalist layout, and sophisticated purple and slate color tones. The setting is a minimalist, airy workspace with natural window lighting and a sense of high-end digital craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9fBOuqkqNPlfa_QaQYpAN2GndsNolkzHqVByJC5zl-bhNE_FEcblH2Ea8f1crY4u2R6cvHVnLTY05b_qD7B8f8BvhRifMPXzp3YtnwNfzYiX61UGpXyaLG2HhSgsaMgMA0161paznyfjm51NWVhvu6-hcOaedtn2zU7B6joMwWE_KLK6qa8Wb1eW8RPAGTruWIGNLIjgkB6gmvqT5hhL7zh3T_6ayHIfXBBMrffxFDlxpuIzFaIQ1bw"/>
+</div>
+<div class="p-lg">
+<div class="flex items-center gap-sm mb-sm">
+<span class="px-sm py-xs bg-surface-container-low text-primary font-label-sm rounded-md uppercase tracking-wider">E-commerce</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-sm">Lumière Boutique</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-lg">Immersive direct-to-consumer experience with real-time inventory sync.</p>
+<a class="inline-flex items-center gap-sm text-primary font-label-md hover:underline" href="#">
+                            View Case Study <span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Project 3 (Startup) -->
+<div class="portfolio-item group relative overflow-hidden rounded-xl bg-white border border-surface-variant shadow-sm hover:shadow-xl transition-all duration-500" data-category="Startup">
+<div class="aspect-[4/3] relative overflow-hidden">
+<img class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110" data-alt="A vibrant dashboard for a high-growth SaaS startup showing real-time analytics and data visualizations. The interface uses a crisp purple and white color palette with glassmorphism elements. The atmosphere is energetic and innovative, lit by soft violet ambient light in a premium digital design studio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3IC0fnYsKYB2RWDdNQAm4KOl0Qwmb3UTqssLZKgf3aghO4hnGff6sopxV1NBedrCsXCSBlvyzhK2dqIDMKL5o1GpgNd9zt0v2l3tx_nZ20FK0Ff9mpiiKa3f4Eqj-4-l_MsDzWRZJh4dZEyB2zr-f3LZFlxtqf-Gnj9GDXxzmC_RyomMM5DNUbS--Uxjs5IVZir0Oo7cQrdVGxdaQ0hNt8r3T6bjcdkW-fkAp9HCzlgrt3ClC8cJxqQ"/>
+</div>
+<div class="p-lg">
+<div class="flex items-center gap-sm mb-sm">
+<span class="px-sm py-xs bg-surface-container-low text-primary font-label-sm rounded-md uppercase tracking-wider">Startup</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-sm">FlowState Analytics</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-lg">Unified data dashboard for agile marketing teams and growth specialists.</p>
+<a class="inline-flex items-center gap-sm text-primary font-label-md hover:underline" href="#">
+                            View Case Study <span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Project 4 (Tech) -->
+<div class="portfolio-item group relative overflow-hidden rounded-xl bg-white border border-surface-variant shadow-sm hover:shadow-xl transition-all duration-500" data-category="Tech">
+<div class="aspect-[4/3] relative overflow-hidden">
+<img class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110" data-alt="A complex cloud infrastructure management platform interface with intricate network maps and node connections. The design is precise and engineering-focused, utilizing a palette of deep purples and subtle greys. High-tech executive aesthetic with macro-photography of silicon wafers softly blurred in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAC_R5emedeu-44oBAd8_cbsbcgxF_JyvEYrI9mg6n37GUPuDaYp3l5PK7LI4-BsF2UcGO0oTd4Q3rk7DWRaDXsYcSOn4r-ADOUIpQE-w252RZXzW1wrXY7mW_opl8dtNwrz9tjmwKCw4UXOie1fwePBxoQmhiVYJYy60EpiET_VBdi5iW5OvWqDDWYgSjwGlcKxgJ4Wt7HCMXWQ1Chyhb0x7iOpF4pPexoXjoK7zGjOKwDj3Zic38wyw"/>
+</div>
+<div class="p-lg">
+<div class="flex items-center gap-sm mb-sm">
+<span class="px-sm py-xs bg-surface-container-low text-primary font-label-sm rounded-md uppercase tracking-wider">Tech</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-sm">Aether Cloud Infrastructure</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-lg">Enterprise-grade cloud orchestration tool for global data centers.</p>
+<a class="inline-flex items-center gap-sm text-primary font-label-md hover:underline" href="#">
+                            View Case Study <span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Project 5 (Corporate) -->
+<div class="portfolio-item group relative overflow-hidden rounded-xl bg-white border border-surface-variant shadow-sm hover:shadow-xl transition-all duration-500" data-category="Corporate">
+<div class="aspect-[4/3] relative overflow-hidden">
+<img class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110" data-alt="An annual sustainability report website for a global energy firm. Clean, expansive whitespace with high-contrast emerald green and primary purple highlights. Professional, trustworthy visual style with large typography and interactive infographics. The setting is a bright, modern corporate boardroom." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr3zmd_aifnMNP0ZZpAg-YLy51VYCvXUtDjfWCLvRlGOEejIH-y9vrmjwn-BykA750LxZjD4e4rHjXQS3iD2K08vOb3u6jYZRvcn9Yh1IPHgMPJ8WlXBmhozn-9soNI-pbqal3tMKefxiPFX40a48rVNblqchcmIM3LPia_40VeLLqn1bTIbPP4DZpQi7C5F_lyr0VTfqC7YX2WURVNDT0fENqmsa8LWFj6P3EUc7HfQI5ScNFCoFy8w"/>
+</div>
+<div class="p-lg">
+<div class="flex items-center gap-sm mb-sm">
+<span class="px-sm py-xs bg-surface-container-low text-primary font-label-sm rounded-md uppercase tracking-wider">Corporate</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-sm">GreenPeak Energy</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-lg">Interactive sustainability portal demonstrating global environmental impact.</p>
+<a class="inline-flex items-center gap-sm text-primary font-label-md hover:underline" href="#">
+                            View Case Study <span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Project 6 (E-commerce) -->
+<div class="portfolio-item group relative overflow-hidden rounded-xl bg-white border border-surface-variant shadow-sm hover:shadow-xl transition-all duration-500" data-category="E-commerce">
+<div class="aspect-[4/3] relative overflow-hidden">
+<img class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110" data-alt="A modern marketplace app for rare furniture and collectibles. The UI features a clean, high-velocity grid system with smooth micro-interactions. Premium aesthetics with soft shadows and refined purple navigation bars. The visual mood is editorial and artistic, captured in a brightly lit architectural space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0xrSmHlTX79MBQMTmXXPQWUF31NiSpFLikTIi7I5YixMPPNaFy0FmTc5U571xeGsdbNcXEvSwU7yb7ehwtqUA7VdZpvfZLxgzfW_gyyN-vcm2pEwTTq8LtpA0c6Th_7OVbhJmAfV_JQvrYf1gDxFAul9dmrPznSnkaoRxoVG9goVyuVDIFMtDFNBTbtKIkAVIn8MAuS_G4QqnkCh1x0u0Trddd8abv5DtWFlJU-SRCg-ybpRlu_Dubg"/>
+</div>
+<div class="p-lg">
+<div class="flex items-center gap-sm mb-sm">
+<span class="px-sm py-xs bg-surface-container-low text-primary font-label-sm rounded-md uppercase tracking-wider">E-commerce</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-sm">Curator's Collective</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-lg">Bespoke marketplace for high-value assets and historical artifacts.</p>
+<a class="inline-flex items-center gap-sm text-primary font-label-md hover:underline" href="#">
+                            View Case Study <span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-gutter py-xxl bg-primary text-on-primary text-center">
+<div class="max-w-container-max mx-auto">
+<h2 class="font-headline-lg text-headline-lg mb-md">Have a visionary project in mind?</h2>
+<p class="font-body-lg text-body-lg text-on-primary-container mb-xl max-w-2xl mx-auto">
+                    Let's collaborate to build something extraordinary. Our team of experts is ready to transform your ideas into reality.
+                </p>
+<div class="flex flex-wrap justify-center gap-md">
+<button class="bg-surface-container-lowest text-primary px-xxl py-md rounded-full font-label-md hover:shadow-lg active:scale-95 transition-all">
+                        Work with Us
+                    </button>
+<button class="border border-on-primary text-on-primary px-xxl py-md rounded-full font-label-md hover:bg-white/10 active:scale-95 transition-all">
+                        View More Services
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface-container-lowest dark:bg-inverse-surface border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-xl px-gutter py-xxl max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-2">
+<div class="flex items-center gap-sm mb-md">
+<span class="material-symbols-outlined text-primary" data-icon="rocket_launch">rocket_launch</span>
+<span class="text-headline-md font-headline-md font-bold text-primary">Noventra</span>
+</div>
+<p class="text-on-surface-variant font-body-sm max-w-sm mb-lg">
+                    Noventra Solutions delivers expert-level digital craftsmanship for modern enterprises seeking high-velocity innovation and reliability.
+                </p>
+<div class="flex gap-md">
+<a class="text-on-surface-variant hover:text-primary transition-all" href="#"><span class="material-symbols-outlined" data-icon="share">share</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-all" href="#"><span class="material-symbols-outlined" data-icon="public">public</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-all" href="#"><span class="material-symbols-outlined" data-icon="hub">hub</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-label-md text-on-surface font-bold uppercase mb-lg">Explore</h4>
+<ul class="space-y-sm">
+<li><a class="text-on-surface-variant font-body-sm hover:text-primary transition-all" href="#">Services</a></li>
+<li><a class="text-primary underline font-body-sm hover:text-primary transition-all" href="#">Portfolio</a></li>
+<li><a class="text-on-surface-variant font-body-sm hover:text-primary transition-all" href="#">About Us</a></li>
+<li><a class="text-on-surface-variant font-body-sm hover:text-primary transition-all" href="#">Insights</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-on-surface font-bold uppercase mb-lg">Resources</h4>
+<ul class="space-y-sm">
+<li><a class="text-on-surface-variant font-body-sm hover:text-primary transition-all" href="#">Careers</a></li>
+<li><a class="text-on-surface-variant font-body-sm hover:text-primary transition-all" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant font-body-sm hover:text-primary transition-all" href="#">Terms of Service</a></li>
+<li><a class="text-on-surface-variant font-body-sm hover:text-primary transition-all" href="#">Contact</a></li>
+</ul>
+</div>
+</div>
+<div class="px-gutter py-lg border-t border-outline-variant/30 text-center">
+<p class="text-on-surface-variant font-body-sm">© 2024 Noventra Solutions. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        function filterPortfolio(category) {
+            const items = document.querySelectorAll('.portfolio-item');
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            // Update buttons
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+                if(category === 'all' && btn.textContent.toLowerCase().includes('all')) btn.classList.add('active');
+                else if(btn.textContent.includes(category)) btn.classList.add('active');
+            });
+
+            // Filter items with a simple fade
+            items.forEach(item => {
+                const itemCategory = item.getAttribute('data-category');
+                item.style.opacity = '0';
+                item.style.transform = 'scale(0.95)';
+                
+                setTimeout(() => {
+                    if (category === 'all' || itemCategory === category) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 50);
+                    } else {
+                        item.style.display = 'none';
+                    }
+                }, 300);
+            });
+        }
+
+        // Simple smooth scroll reveal effect
+        window.addEventListener('scroll', () => {
+            const items = document.querySelectorAll('.portfolio-item');
+            items.forEach(item => {
+                const rect = item.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    item.classList.add('opacity-100');
+                }
+            });
+        });
+    </script>
+</body></html>

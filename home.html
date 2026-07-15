@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Noventra Solutions | Future-Proof Your Digital Presence</title>
+<!-- Tailwind CSS & Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Geist:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "outline-variant": "#ccc3d7",
+            "tertiary-fixed-dim": "#ccbeff",
+            "on-primary-fixed-variant": "#5b00c5",
+            "on-tertiary-fixed-variant": "#4a3d7c",
+            "outline": "#7b7486",
+            "primary": "#5300b7",
+            "inverse-primary": "#d3bbff",
+            "surface-container": "#eaedff",
+            "on-error-container": "#93000a",
+            "inverse-surface": "#283044",
+            "on-primary-container": "#dac5ff",
+            "surface": "#faf8ff",
+            "on-error": "#ffffff",
+            "secondary-fixed-dim": "#c7c5d1",
+            "secondary-fixed": "#e3e1ed",
+            "secondary": "#5d5d67",
+            "surface-variant": "#dae2fd",
+            "on-secondary": "#ffffff",
+            "background": "#faf8ff",
+            "surface-dim": "#d2d9f4",
+            "primary-container": "#6d28d9",
+            "primary-fixed-dim": "#d3bbff",
+            "error": "#ba1a1a",
+            "surface-container-low": "#f2f3ff",
+            "tertiary": "#443776",
+            "on-surface-variant": "#4a4455",
+            "on-surface": "#131b2e",
+            "primary-fixed": "#ebddff",
+            "on-primary-fixed": "#250059",
+            "on-tertiary": "#ffffff",
+            "surface-container-highest": "#dae2fd",
+            "on-tertiary-container": "#d4c8ff",
+            "on-background": "#131b2e",
+            "tertiary-fixed": "#e7deff",
+            "on-tertiary-fixed": "#1e0e4e",
+            "error-container": "#ffdad6",
+            "surface-container-lowest": "#ffffff",
+            "tertiary-container": "#5c4f8f",
+            "on-secondary-fixed-variant": "#46464f",
+            "secondary-container": "#e3e1ed",
+            "on-primary": "#ffffff",
+            "inverse-on-surface": "#eef0ff",
+            "on-secondary-fixed": "#1a1b23",
+            "surface-tint": "#7331df",
+            "surface-container-high": "#e2e7ff",
+            "surface-bright": "#faf8ff",
+            "on-secondary-container": "#64636d"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "container-max": "1280px",
+            "xs": "4px",
+            "xl": "32px",
+            "xxl": "64px",
+            "md": "16px",
+            "gutter": "24px",
+            "sm": "8px",
+            "unit": "4px",
+            "lg": "24px"
+          },
+          "fontFamily": {
+            "body-sm": ["Inter"],
+            "body-md": ["Inter"],
+            "body-lg": ["Inter"],
+            "headline-lg-mobile": ["Geist"],
+            "headline-md": ["Geist"],
+            "display-lg": ["Geist"],
+            "label-sm": ["Geist"],
+            "label-md": ["Geist"],
+            "headline-lg": ["Geist"]
+          },
+          "fontSize": {
+            "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+            "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+            "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+            "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+            "headline-md": ["24px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+            "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+            "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+            "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.02em", "fontWeight": "500"}],
+            "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(20px);
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      vertical-align: middle;
+    }
+    .hero-gradient {
+      background: radial-gradient(circle at 50% 50%, rgba(109, 40, 217, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      height: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #ccc3d7;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-on-surface/80 backdrop-blur-xl border-b border-surface-variant/30 shadow-sm">
+<div class="flex justify-between items-center h-16 px-gutter max-w-container-max mx-auto">
+<div class="flex items-center gap-sm group cursor-pointer">
+<img alt="Noventra Logo" class="h-8 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsgByHf_vmaiuQSu5ccxiDkxkYXH3MJXGFnc81T9rgWqpN1KNggFoXB2PJU_eoptww_dmKCedpZs7Fjr8wrRBEsl03eHniRgYfPqRIg-u_9NaQqfdKj2FTv0DgaPVKmQKf14X7IaGHFIr4vyUodnIQznDQT23OqNjyswPKOFeoD2BIGmnX27DzoraaPQvILQMbtZj2cpla_k5DaG8Gp_t2m25pB-0bREoGfyIFUUaOFMRbmD1BYaoNIw"/>
+<span class="font-headline-md text-headline-md font-bold tracking-tight text-primary dark:text-inverse-primary">Noventra</span>
+</div>
+<div class="hidden md:flex gap-lg items-center">
+<a class="text-primary dark:text-inverse-primary font-semibold border-b-2 border-primary py-1 transition-all" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant/80 font-medium hover:text-primary transition-colors" href="#">Services</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant/80 font-medium hover:text-primary transition-colors" href="#">Portfolio</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant/80 font-medium hover:text-primary transition-colors" href="#">About</a>
+</div>
+<button class="bg-primary-container text-white px-lg py-sm rounded-lg font-label-md hover:opacity-90 active:scale-95 transition-all">
+        Get Started
+      </button>
+</div>
+</nav>
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center overflow-hidden hero-gradient">
+<div class="absolute inset-0 z-0 pointer-events-none">
+<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-tertiary/5 rounded-full blur-3xl"></div>
+</div>
+<div class="px-gutter max-w-container-max mx-auto w-full relative z-10 py-xxl">
+<div class="max-w-3xl space-y-lg">
+<div class="inline-flex items-center gap-xs px-md py-xs bg-surface-container rounded-full border border-outline-variant">
+<span class="material-symbols-outlined text-primary text-[18px]">rocket_launch</span>
+<span class="font-label-sm text-primary uppercase">Empowering Enterprise Evolution</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface leading-tight tracking-tighter">
+            Future-Proof Your <br class="hidden md:block"/> <span class="text-primary">Digital Presence</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+            High-performance IT infrastructure and elite software solutions engineered for modern enterprises. We bridge the gap between complex engineering and premium business outcomes.
+          </p>
+<div class="flex flex-wrap gap-md pt-md">
+<button class="bg-primary text-white px-xxl py-md rounded-xl font-label-md shadow-lg shadow-primary/20 hover:translate-y-[-2px] transition-all">
+              Book Consultation
+            </button>
+<button class="flex items-center gap-sm px-xl py-md border border-outline rounded-xl font-label-md text-on-surface hover:bg-surface-variant transition-all">
+<span class="material-symbols-outlined">play_circle</span>
+              Watch Innovation
+            </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Overview -->
+<section class="py-xxl bg-surface">
+<div class="px-gutter max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end gap-md mb-xxl">
+<div class="max-w-xl space-y-md">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Precision Engineered Services</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Scalable technological architecture designed to sustain growth and ensure operational excellence in a volatile market.</p>
+</div>
+<a class="text-primary font-label-md flex items-center gap-xs hover:gap-sm transition-all" href="#">
+            View All Services <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+<!-- Card 1 -->
+<div class="group p-lg bg-white border border-outline-variant rounded-xl hover:border-primary hover:shadow-xl transition-all duration-300">
+<div class="w-12 h-12 bg-primary-fixed rounded-lg flex items-center justify-center mb-lg group-hover:bg-primary-container group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">cloud_done</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-md">Cloud Architecture</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-xl">Multi-cloud deployments and hybrid infrastructure strategies for seamless global operations.</p>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">arrow_right_alt</span>
+</div>
+<!-- Card 2 -->
+<div class="group p-lg bg-white border border-outline-variant rounded-xl hover:border-primary hover:shadow-xl transition-all duration-300">
+<div class="w-12 h-12 bg-surface-container-high rounded-lg flex items-center justify-center mb-lg group-hover:bg-primary-container group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">security</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-md">Cyber Resilience</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-xl">Advanced zero-trust security frameworks protecting your most critical digital assets.</p>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">arrow_right_alt</span>
+</div>
+<!-- Card 3 -->
+<div class="group p-lg bg-white border border-outline-variant rounded-xl hover:border-primary hover:shadow-xl transition-all duration-300">
+<div class="w-12 h-12 bg-tertiary-fixed rounded-lg flex items-center justify-center mb-lg group-hover:bg-primary-container group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">insights</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-md">Data Intelligence</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-xl">Transforming raw organizational data into actionable strategic insights through AI.</p>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">arrow_right_alt</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Live Statistics (Bento Style) -->
+<section class="py-xxl bg-inverse-surface text-inverse-on-surface">
+<div class="px-gutter max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg">
+<div class="md:col-span-2 space-y-md p-xl">
+<h2 class="font-headline-lg text-headline-lg">Reliability in Numbers</h2>
+<p class="text-on-surface-variant/80">We don't just promise results; we quantify them. Our track record spans across continents and industries.</p>
+</div>
+<div class="bg-surface/10 backdrop-blur-md p-xl rounded-2xl flex flex-col justify-center items-center text-center">
+<span class="font-display-lg text-display-lg text-primary-fixed-dim">200+</span>
+<span class="font-label-md text-inverse-on-surface/60 uppercase">Projects Delivered</span>
+</div>
+<div class="bg-surface/10 backdrop-blur-md p-xl rounded-2xl flex flex-col justify-center items-center text-center">
+<span class="font-display-lg text-display-lg text-primary-fixed-dim">95%</span>
+<span class="font-label-md text-inverse-on-surface/60 uppercase">Satisfaction Rate</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Projects Carousel (Horizontal scroll) -->
+<section class="py-xxl overflow-hidden">
+<div class="px-gutter max-w-container-max mx-auto mb-lg">
+<h2 class="font-headline-lg text-headline-lg">Impactful Transformations</h2>
+</div>
+<div class="flex gap-lg px-gutter overflow-x-auto custom-scrollbar pb-lg snap-x">
+<!-- Project 1 -->
+<div class="min-w-[320px] md:min-w-[480px] group snap-start">
+<div class="relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden mb-md shadow-lg">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A futuristic workspace with large high-definition screens displaying complex network graphs and data analytics. The lighting is cool-toned with purple highlights, reflecting a clean corporate and glassmorphism aesthetic. Professional architects are discussing strategy in a blurred background, emphasizing focus on technological performance and digital craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfYpnnCdZ0VkHNVMDATIyEqj6rAGVSwaFSPlXKCh4gmJOcGrqxCHr-204DbtpynQQv8FoSFPcK6ym5BfAHINqECdMzs5lnJrSK2oxaha4ZUNnxe3Z9UXZIGc1iY0_EbhX2nv4xnEEHOdAYqyygt_Qu5lo6XvI48oaQG0Llv5SwvWV-tfVsC8Hna8XxYeRShpE6xuAKF3kbmlWErIZo-hYVKoj5v8i8t-UsMk5U-a_y5JrhhVozvwcjSQ"/>
+<div class="absolute bottom-md left-md z-20">
+<span class="bg-primary/90 text-white px-md py-xs rounded-full text-label-sm uppercase mb-xs inline-block">FinTech</span>
+<h4 class="text-white font-headline-md">Global Ledger System</h4>
+</div>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="min-w-[320px] md:min-w-[480px] group snap-start">
+<div class="relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden mb-md shadow-lg">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A wide view of a modern automated warehouse where sleek robotic units move efficiently between shelving systems. The scene is illuminated by soft overhead lighting and neon purple accent strips on the robots. The environment is impeccably clean, representing high-velocity innovation and industrial reliability. The visual style is premium and enterprise-focused." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5RwgqAxHbDu4R17J-O1kZjiUP_WximmHqoC4e8c66M9xUCWA_hSwAaaV_qwdjczNfhOzD_mIG48duzRrDdcrPGwlC-F3LUlzeI61zjL4yV0SEGXytUnPG8Cy0qToi5F_02Jw2gRiE47WgdJkQQUN_ifkMk2-4uzHX3CfYGQXY9o3Hmuy1IM2Q-FjBuSkMx3K3oZoR8vfVDpm_3IDtBe2fyFhjpMhV2Za4lIxLswGAArZBTfKunYEKPg"/>
+<div class="absolute bottom-md left-md z-20">
+<span class="bg-primary/90 text-white px-md py-xs rounded-full text-label-sm uppercase mb-xs inline-block">Logistics</span>
+<h4 class="text-white font-headline-md">AI Supply Core</h4>
+</div>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="min-w-[320px] md:min-w-[480px] group snap-start">
+<div class="relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden mb-md shadow-lg">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A modern healthcare facility featuring transparent glass panels with digital medical interfaces overlaying the physical space. Doctors are using tablet devices that glow with soft light. The aesthetic is extremely clean, minimalist, and high-tech, using a palette of white and primary purple. The mood is hopeful and technologically advanced." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRu-53Kh_zQiHpLBDMImaeSvW1SEaSQnHXvQOakmDvKiGlDCsT37sHxJdNfAfzEkgu7-Rw1s2AnPVsRh_KVuqCltPJR1TBPNmM82jn0E9kirJVJT_tUQy3J0sketlcyX8cx9kljHkSSlf6V-sIX1lWIBA1fTHrQfeBJDQlyQFVHVOBMEfZkxqCdUwkImo8gXKUnO8VH10HPMt6Yj7AlhlmQREJFS-zYUNM_ERJxnUMsOZTTC30a62XQg"/>
+<div class="absolute bottom-md left-md z-20">
+<span class="bg-primary/90 text-white px-md py-xs rounded-full text-label-sm uppercase mb-xs inline-block">HealthTech</span>
+<h4 class="text-white font-headline-md">Nexus Patient Care</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Latest Blogs -->
+<section class="py-xxl bg-surface-container-low">
+<div class="px-gutter max-w-container-max mx-auto">
+<div class="text-center mb-xxl max-w-2xl mx-auto space-y-md">
+<h2 class="font-headline-lg text-headline-lg">Industry Insights</h2>
+<p class="font-body-md text-on-surface-variant">Stay ahead of the curve with our expert analysis on emerging technologies and market trends.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
+<!-- Blog 1 -->
+<article class="bg-white rounded-2xl p-md border border-outline-variant hover:shadow-lg transition-all flex flex-col">
+<div class="rounded-xl overflow-hidden mb-md h-48">
+<img class="w-full h-full object-cover" data-alt="Close up of a server rack with blinking purple LED lights in a dark data center room. The cables are neatly organized, showcasing expert-level engineering and reliability. Wisps of cooling vapor add a sense of high-performance environment. The shot is high-contrast and professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqwVmFR5btxrCDbxsO9XQA9lAT9cQbFCZZ1q2WMJjAxfRt_kkUL9Bd7wXbVmYu7yMgWc19Ze9eb3HDs5wIWqQI1lH4UIhi85jUI9GxbOlY9PcQIJx-t-2uKRhv2QrDiyfhg1ZGXHQDQ7tAWsaLauNTGzeuIHZLAER41Cs1X8YlGRqEKjmPDMEhaXMhiH8Md78AA0kj_s7yjrP3rVgasobLT7JCju62mQMkebz2bBX7lOkiySnX1YJ-2A"/>
+</div>
+<div class="px-xs flex-grow">
+<time class="text-label-sm text-outline uppercase">March 12, 2024</time>
+<h3 class="font-headline-md text-headline-md mt-sm mb-md leading-snug">The Shift to Sovereign Clouds: Why Compliance Matters Now</h3>
+<p class="text-body-sm text-on-surface-variant line-clamp-2">Exploring the geopolitical implications of data storage and why enterprises are moving away from public cloud monopolies.</p>
+</div>
+<a class="mt-lg px-xs py-sm border-t border-surface-variant flex items-center justify-between text-primary font-label-md group" href="#">
+              Read Article
+              <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">chevron_right</span>
+</a>
+</article>
+<!-- Blog 2 -->
+<article class="bg-white rounded-2xl p-md border border-outline-variant hover:shadow-lg transition-all flex flex-col">
+<div class="rounded-xl overflow-hidden mb-md h-48">
+<img class="w-full h-full object-cover" data-alt="An abstract visualization of neural networks and digital code flowing through a crystal-like structure. The colors are vibrant purples and deep blues. The image captures the essence of artificial intelligence and data intelligence in a premium, executive-facing aesthetic. Minimalist and sharp." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCluaeSCiuT-_3h5m5Q-9AdjpVNkqY3Lco7xkgb5qli97-RgfxxeWUb29OJdLl8VeWoxN-0DyTYtlgJey2bNf-CtEjdNIP74nyFuXXJhPp3JcPZgKwDuQnbBPvrjK3GwlBd4i0YbLzQgnZhCpmJSj2mN5mY1h76dbPJQdEn5hslB3fc4jR4ZGodHkTrOFyWqyScXpEWQODeiyR8hWIEvPi5_9YvqbdC3zGGLED2HQ9QK0dKOd2hUcjTEA"/>
+</div>
+<div class="px-xs flex-grow">
+<time class="text-label-sm text-outline uppercase">February 28, 2024</time>
+<h3 class="font-headline-md text-headline-md mt-sm mb-md leading-snug">Generative AI in the Enterprise: Beyond the Hype</h3>
+<p class="text-body-sm text-on-surface-variant line-clamp-2">A pragmatic guide for CTOs on integrating large language models without compromising corporate security.</p>
+</div>
+<a class="mt-lg px-xs py-sm border-t border-surface-variant flex items-center justify-between text-primary font-label-md group" href="#">
+              Read Article
+              <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">chevron_right</span>
+</a>
+</article>
+<!-- Blog 3 -->
+<article class="bg-white rounded-2xl p-md border border-outline-variant hover:shadow-lg transition-all flex flex-col">
+<div class="rounded-xl overflow-hidden mb-md h-48">
+<img class="w-full h-full object-cover" data-alt="A clean top-down view of a designer's desk with a minimalist tablet, a stylus, and a sleek coffee cup. The desk surface is white with subtle textures. The lighting is bright and natural, reflecting a high-key modern corporate aesthetic. It represents the concept of digital craftsmanship and executive focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2ylHT_3wkVlq-5LZKE3QTT7HvePyFo2oGnHMLEQysgdqyRvlhdiex7lOCutP7QsBEddToe3-9ZIXq6dnfza9cOP7drkaAQE1hd6nZVto6lOaR6ODFa4CucwJzq4x5zOj8PUs3nw9rt75iI5QI591iutDMhxbWqSRKNTqaVYMP4xqWPO9iX5wacYhEUhkV5h6ouSGjFNWCeeapitMKFz_GlNGOZLwSxZV3epvwa-AbQepEBViE7TIWOw"/>
+</div>
+<div class="px-xs flex-grow">
+<time class="text-label-sm text-outline uppercase">February 15, 2024</time>
+<h3 class="font-headline-md text-headline-md mt-sm mb-md leading-snug">Design as a Performance Metric: UI/UX in SaaS</h3>
+<p class="text-body-sm text-on-surface-variant line-clamp-2">How refined user experience directly impacts retention rates and long-term customer lifetime value in B2B software.</p>
+</div>
+<a class="mt-lg px-xs py-sm border-t border-surface-variant flex items-center justify-between text-primary font-label-md group" href="#">
+              Read Article
+              <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">chevron_right</span>
+</a>
+</article>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-xxl px-gutter">
+<div class="max-w-container-max mx-auto bg-primary rounded-3xl p-xl md:p-xxl relative overflow-hidden text-center text-white">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.1),transparent)]"></div>
+<div class="relative z-10 space-y-lg max-w-2xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg">Ready to Scale Your Digital Horizon?</h2>
+<p class="text-body-lg text-primary-fixed-dim">Partner with Noventra to transform your technological challenges into competitive advantages.</p>
+<div class="flex flex-col md:flex-row gap-md justify-center pt-md">
+<button class="bg-white text-primary px-xxl py-md rounded-xl font-label-md hover:bg-surface-container transition-all">
+              Book a Strategy Call
+            </button>
+<button class="border border-white/30 px-xxl py-md rounded-xl font-label-md hover:bg-white/10 transition-all">
+              Explore Services
+            </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-inverse-surface border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-xl px-gutter py-xxl max-w-container-max mx-auto">
+<div class="space-y-md">
+<div class="flex items-center gap-sm">
+<img alt="Noventra Logo" class="h-6 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsgByHf_vmaiuQSu5ccxiDkxkYXH3MJXGFnc81T9rgWqpN1KNggFoXB2PJU_eoptww_dmKCedpZs7Fjr8wrRBEsl03eHniRgYfPqRIg-u_9NaQqfdKj2FTv0DgaPVKmQKf14X7IaGHFIr4vyUodnIQznDQT23OqNjyswPKOFeoD2BIGmnX27DzoraaPQvILQMbtZj2cpla_k5DaG8Gp_t2m25pB-0bREoGfyIFUUaOFMRbmD1BYaoNIw"/>
+<span class="text-headline-md font-headline-md font-bold text-primary">Noventra</span>
+</div>
+<p class="font-body-sm text-on-surface-variant">Global leader in enterprise-grade IT solutions and high-performance digital engineering.</p>
+</div>
+<div>
+<h4 class="font-label-md text-on-surface mb-md">Company</h4>
+<ul class="space-y-sm font-body-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-all" href="#">About Us</a></li>
+<li><a class="hover:text-primary transition-all" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-all" href="#">Newsroom</a></li>
+<li><a class="hover:text-primary transition-all" href="#">Partners</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-on-surface mb-md">Solutions</h4>
+<ul class="space-y-sm font-body-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-all" href="#">Services</a></li>
+<li><a class="hover:text-primary transition-all" href="#">Portfolio</a></li>
+<li><a class="hover:text-primary transition-all" href="#">Insights</a></li>
+<li><a class="hover:text-primary transition-all" href="#">Case Studies</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-on-surface mb-md">Contact</h4>
+<ul class="space-y-sm font-body-sm text-on-surface-variant">
+<li class="flex items-center gap-xs"><span class="material-symbols-outlined text-[18px]">mail</span> hello@noventra.com</li>
+<li class="flex items-center gap-xs"><span class="material-symbols-outlined text-[18px]">call</span> +1 (555) 000-NOVN</li>
+<li><a class="hover:text-primary transition-all" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-outline-variant px-gutter py-lg max-w-container-max mx-auto text-center font-body-sm text-on-surface-variant/60">
+      © 2024 Noventra Solutions. All rights reserved.
+    </div>
+</footer>
+<script>
+    // Micro-interactions and subtle effects
+    document.addEventListener('mousemove', (e) => {
+      const hero = document.querySelector('.hero-gradient');
+      if (!hero) return;
+      const x = e.clientX / window.innerWidth;
+      const y = e.clientY / window.innerHeight;
+      hero.style.background = `radial-gradient(circle at ${x * 100}% ${y * 100}%, rgba(109, 40, 217, 0.08) 0%, rgba(255, 255, 255, 0) 70%)`;
+    });
+
+    // Reveal animation logic
+    const observerOptions = {
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('opacity-100', 'translate-y-0');
+          entry.target.classList.remove('opacity-0', 'translate-y-10');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('section > div').forEach(el => {
+      el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+      observer.observe(el);
+    });
+  </script>
+</body></html>
