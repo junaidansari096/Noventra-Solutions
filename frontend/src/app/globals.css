@@ -186,6 +186,9 @@
 @utility gap-xl {
   gap: 32px;
 }
+@utility gap-lg {
+  gap: 24px;
+}
 @utility gap-md {
   gap: 16px;
 }

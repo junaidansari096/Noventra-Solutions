@@ -43,10 +43,10 @@ export default function RootLayout({
               <Link href="/contact" className="text-on-surface-variant font-medium hover:text-primary transition-colors py-1">Contact</Link>
             </nav>
             <div className="flex items-center gap-md">
-              <Link href="/portal" className="text-sm font-semibold text-primary hover:text-primary-container px-3 py-1.5 rounded-lg border border-primary/20 hover:border-primary/50 transition-all">
+              <Link href="/portal" className="inline-flex items-center justify-center text-sm font-semibold text-primary hover:text-primary-container px-4 py-2 rounded-lg border border-primary/20 hover:border-primary/50 transition-all h-[38px] box-border">
                 Portal
               </Link>
-              <Link href="/admin" className="bg-primary-container text-white px-lg py-sm rounded-lg font-label-md hover:opacity-90 active:scale-95 transition-all">
+              <Link href="/admin" className="inline-flex items-center justify-center bg-primary-container text-white px-4 py-2 rounded-lg font-label-md hover:opacity-90 active:scale-95 transition-all h-[38px] box-border">
                 Dashboard
               </Link>
             </div>

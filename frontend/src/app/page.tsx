@@ -236,23 +236,23 @@ export default function HomePage() {
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-tertiary/5 rounded-full blur-3xl"></div>
         </div>
-        <div className="px-gutter max-w-container-max mx-auto w-full relative z-10 py-xxl">
-          <div className="max-w-3xl space-y-lg">
-            <div className="inline-flex items-center gap-xs px-md py-xs bg-surface-container rounded-full border border-outline-variant">
+        <div className="px-gutter max-w-container-max mx-auto w-full relative z-10 py-20 md:py-28">
+          <div className="max-w-3xl space-y-6 md:space-y-8">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-surface-container rounded-full border border-outline-variant">
               <span className="material-symbols-outlined text-primary text-[18px]">rocket_launch</span>
               <span className="font-label-sm text-primary uppercase">Empowering Enterprise Evolution</span>
             </div>
             <h1 className="font-display-lg text-display-lg text-on-surface leading-tight tracking-tighter">
-              Future-Proof Your <br className="hidden md:block" /> <span class="text-primary">Digital Presence</span>
+              Future-Proof Your <br className="hidden md:block" /> <span className="text-primary">Digital Presence</span>
             </h1>
             <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
               High-performance IT infrastructure and elite software solutions engineered for modern enterprises. We bridge the gap between complex engineering and premium business outcomes.
             </p>
-            <div className="flex flex-wrap gap-md pt-md">
-              <Link href="/contact" className="bg-primary text-white px-xxl py-md rounded-xl font-label-md shadow-lg shadow-primary/20 hover:translate-y-[-2px] transition-all">
+            <div className="flex flex-wrap gap-4 pt-6 items-center">
+              <Link href="/contact" className="inline-flex items-center justify-center bg-primary text-white px-8 py-3.5 rounded-xl font-semibold shadow-lg shadow-primary/20 hover:bg-primary/95 hover:translate-y-[-2px] transition-all">
                 Book Consultation
               </Link>
-              <Link href="/services" className="flex items-center gap-sm px-xl py-md border border-outline rounded-xl font-label-md text-on-surface hover:bg-surface-variant transition-all">
+              <Link href="/services" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 border border-outline hover:border-primary font-semibold rounded-xl text-on-surface hover:bg-surface-variant transition-all">
                 <span className="material-symbols-outlined">explore</span>
                 Explore Services
               </Link>
@@ -262,38 +262,46 @@ export default function HomePage() {
       </section>
 
       {/* Services Overview */}
-      <section className="py-xxl bg-surface">
+      <section className="py-20 bg-surface">
         <div className="px-gutter max-w-container-max mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-end gap-md mb-xxl">
-            <div className="max-w-xl space-y-md">
+          <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-16">
+            <div className="max-w-xl space-y-4">
               <h2 className="font-headline-lg text-headline-lg text-on-surface">Precision Engineered Services</h2>
               <p className="font-body-md text-body-md text-on-surface-variant">Scalable technological architecture designed to sustain growth and ensure operational excellence in a volatile market.</p>
             </div>
-            <Link className="text-primary font-label-md flex items-center gap-xs hover:gap-sm transition-all" href="/services">
+            <Link className="text-primary font-semibold text-sm flex items-center gap-1 hover:gap-2 transition-all" href="/services">
               View All Services <span className="material-symbols-outlined">arrow_forward</span>
             </Link>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-lg">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.length > 0 ? (
               services.map((service) => (
-                <div key={service.id} className="group p-lg bg-white border border-outline-variant rounded-xl hover:border-primary hover:shadow-xl transition-all duration-300">
-                  <div className="w-12 h-12 bg-primary-fixed rounded-lg flex items-center justify-center mb-lg group-hover:bg-primary-container group-hover:text-white transition-colors">
+                <div key={service.id} className="group p-8 bg-white border border-outline-variant/60 rounded-2xl hover:border-primary hover:shadow-xl transition-all duration-300 flex flex-col h-full">
+                  <div className="w-12 h-12 bg-primary-fixed rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary-container group-hover:text-white transition-colors">
                     <span className="material-symbols-outlined text-primary group-hover:text-white">{getServiceIcon(service.icon)}</span>
                   </div>
-                  <h3 className="font-headline-md text-headline-md mb-md">{service.title}</h3>
-                  <p className="font-body-md text-body-md text-on-surface-variant mb-xl">{service.description}</p>
-                  <Link href="/services" className="material-symbols-outlined text-outline group-hover:text-primary transition-colors">arrow_right_alt</Link>
+                  <h3 className="font-headline-md text-headline-md mb-3">{service.title}</h3>
+                  <p className="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">{service.description}</p>
+                  <div className="pt-4 border-t border-outline-variant/30 mt-auto">
+                    <Link href="/services" className="inline-flex items-center gap-1 text-sm font-semibold text-primary group-hover:text-primary/80 transition-colors">
+                      Learn More <span className="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </Link>
+                  </div>
                 </div>
               ))
             ) : (
               defaultServices.map((service) => (
-                <div key={service.id} className="group p-lg bg-white border border-outline-variant rounded-xl hover:border-primary hover:shadow-xl transition-all duration-300">
-                  <div className="w-12 h-12 bg-primary-fixed rounded-lg flex items-center justify-center mb-lg group-hover:bg-primary-container group-hover:text-white transition-colors">
+                <div key={service.id} className="group p-8 bg-white border border-outline-variant/60 rounded-2xl hover:border-primary hover:shadow-xl transition-all duration-300 flex flex-col h-full">
+                  <div className="w-12 h-12 bg-primary-fixed rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary-container group-hover:text-white transition-colors">
                     <span className="material-symbols-outlined text-primary group-hover:text-white">{service.icon}</span>
                   </div>
-                  <h3 className="font-headline-md text-headline-md mb-md">{service.title}</h3>
-                  <p className="font-body-md text-body-md text-on-surface-variant mb-xl">{service.description}</p>
-                  <Link href="/services" className="material-symbols-outlined text-outline group-hover:text-primary transition-colors">arrow_right_alt</Link>
+                  <h3 className="font-headline-md text-headline-md mb-3">{service.title}</h3>
+                  <p className="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">{service.description}</p>
+                  <div className="pt-4 border-t border-outline-variant/30 mt-auto">
+                    <Link href="/services" className="inline-flex items-center gap-1 text-sm font-semibold text-primary group-hover:text-primary/80 transition-colors">
+                      Learn More <span className="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </Link>
+                  </div>
                 </div>
               ))
             )}
@@ -302,45 +310,45 @@ export default function HomePage() {
       </section>
 
       {/* Live Statistics (Bento Style) */}
-      <section className="py-xxl bg-inverse-surface text-inverse-on-surface">
+      <section className="py-20 bg-inverse-surface text-inverse-on-surface">
         <div className="px-gutter max-w-container-max mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-lg">
-            <div className="md:col-span-2 space-y-md p-xl">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="md:col-span-2 space-y-4 p-8">
               <h2 className="font-headline-lg text-headline-lg">Reliability in Numbers</h2>
               <p className="text-on-surface-variant/80">We don't just promise results; we quantify them. Our track record spans across continents and industries.</p>
             </div>
-            <div className="bg-surface/10 backdrop-blur-md p-xl rounded-2xl flex flex-col justify-center items-center text-center">
+            <div className="bg-white/5 backdrop-blur-md p-8 rounded-2xl flex flex-col justify-center items-center text-center border border-white/10">
               <span className="font-display-lg text-display-lg text-primary-fixed-dim">200+</span>
-              <span className="font-label-md text-inverse-on-surface/60 uppercase">Projects Delivered</span>
+              <span className="font-label-md text-inverse-on-surface/60 uppercase tracking-wider">Projects Delivered</span>
             </div>
-            <div className="bg-surface/10 backdrop-blur-md p-xl rounded-2xl flex flex-col justify-center items-center text-center">
+            <div className="bg-white/5 backdrop-blur-md p-8 rounded-2xl flex flex-col justify-center items-center text-center border border-white/10">
               <span className="font-display-lg text-display-lg text-primary-fixed-dim">95%</span>
-              <span className="font-label-md text-inverse-on-surface/60 uppercase">Satisfaction Rate</span>
+              <span className="font-label-md text-inverse-on-surface/60 uppercase tracking-wider">Satisfaction Rate</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* Featured Projects Showcase */}
-      <section className="py-xxl overflow-hidden bg-surface-container-low">
-        <div className="px-gutter max-w-container-max mx-auto mb-lg flex justify-between items-center">
+      <section className="py-20 overflow-hidden bg-surface-container-low">
+        <div className="px-gutter max-w-container-max mx-auto mb-8 flex justify-between items-center">
           <h2 className="font-headline-lg text-headline-lg">Impactful Transformations</h2>
           <Link href="/portfolio" className="text-primary text-sm font-semibold hover:underline">
             View All Work
           </Link>
         </div>
         <div className="max-w-container-max mx-auto px-gutter">
-          <div className="flex gap-lg overflow-x-auto custom-scrollbar pb-lg snap-x">
+          <div className="flex gap-8 overflow-x-auto custom-scrollbar pb-6 snap-x">
             {projects.length > 0 ? (
               projects.map((project) => (
                 <div key={project.id} className="min-w-[320px] md:min-w-[480px] group snap-start">
-                  <div className="relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden mb-md shadow-lg">
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+                  <div className="relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden mb-4 shadow-lg border border-outline-variant/10">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent z-10"></div>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt={project.title} src={project.image_url} />
-                    <div className="absolute bottom-md left-md z-20">
-                      <span className="bg-primary/90 text-white px-md py-xs rounded-full text-label-sm uppercase mb-xs inline-block">{project.category}</span>
-                      <h4 className="text-white font-headline-md">{project.title}</h4>
+                    <div className="absolute bottom-6 left-6 z-20">
+                      <span className="inline-flex items-center justify-center bg-white/20 backdrop-blur-md text-white border border-white/20 px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-2.5">{project.category}</span>
+                      <h4 className="text-white font-headline-md font-bold">{project.title}</h4>
                     </div>
                   </div>
                 </div>
@@ -348,13 +356,13 @@ export default function HomePage() {
             ) : (
               defaultProjects.map((project) => (
                 <div key={project.id} className="min-w-[320px] md:min-w-[480px] group snap-start">
-                  <div className="relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden mb-md shadow-lg">
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+                  <div className="relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden mb-4 shadow-lg border border-outline-variant/10">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent z-10"></div>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt={project.title} src={project.image_url} />
-                    <div className="absolute bottom-md left-md z-20">
-                      <span className="bg-primary/90 text-white px-md py-xs rounded-full text-label-sm uppercase mb-xs inline-block">{project.category}</span>
-                      <h4 className="text-white font-headline-md">{project.title}</h4>
+                    <div className="absolute bottom-6 left-6 z-20">
+                      <span className="inline-flex items-center justify-center bg-white/20 backdrop-blur-md text-white border border-white/20 px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-2.5">{project.category}</span>
+                      <h4 className="text-white font-headline-md font-bold">{project.title}</h4>
                     </div>
                   </div>
                 </div>
@@ -365,46 +373,46 @@ export default function HomePage() {
       </section>
 
       {/* Latest Blogs / Insights */}
-      <section className="py-xxl">
+      <section className="py-20">
         <div className="px-gutter max-w-container-max mx-auto">
-          <div className="text-center mb-xxl max-w-2xl mx-auto space-y-md">
+          <div className="text-center mb-16 max-w-2xl mx-auto space-y-4">
             <h2 className="font-headline-lg text-headline-lg">Industry Insights</h2>
             <p className="font-body-md text-on-surface-variant">Stay ahead of the curve with our expert analysis on emerging technologies and market trends.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogs.length > 0 ? (
               blogs.map((blog) => (
-                <article key={blog.id} className="bg-white rounded-2xl p-md border border-outline-variant hover:shadow-lg transition-all flex flex-col">
-                  <div className="rounded-xl overflow-hidden mb-md h-48">
+                <article key={blog.id} className="bg-white rounded-2xl p-6 border border-outline-variant hover:shadow-lg transition-all flex flex-col">
+                  <div className="rounded-xl overflow-hidden mb-4 h-48">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img className="w-full h-full object-cover" alt={blog.title} src={blog.cover_image} />
                   </div>
-                  <div className="px-xs flex-grow">
+                  <div className="px-1 flex-grow">
                     <time className="text-label-sm text-outline uppercase">{new Date(blog.published_at).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</time>
-                    <h3 className="font-headline-md text-headline-md mt-sm mb-md leading-snug">{blog.title}</h3>
+                    <h3 className="font-headline-md text-headline-md mt-2 mb-3 leading-snug">{blog.title}</h3>
                     <p className="text-body-sm text-on-surface-variant line-clamp-2">{blog.summary}</p>
                   </div>
-                  <Link className="mt-lg px-xs py-sm border-t border-surface-variant flex items-center justify-between text-primary font-label-md group" href="/blog">
+                  <Link className="mt-6 pt-4 border-t border-outline-variant/30 flex items-center justify-between text-primary font-semibold text-sm group" href="/blog">
                     Read Article
-                    <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">chevron_right</span>
+                    <span className="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">chevron_right</span>
                   </Link>
                 </article>
               ))
             ) : (
               defaultBlogs.map((blog) => (
-                <article key={blog.id} className="bg-white rounded-2xl p-md border border-outline-variant hover:shadow-lg transition-all flex flex-col">
-                  <div className="rounded-xl overflow-hidden mb-md h-48">
+                <article key={blog.id} className="bg-white rounded-2xl p-6 border border-outline-variant hover:shadow-lg transition-all flex flex-col">
+                  <div className="rounded-xl overflow-hidden mb-4 h-48">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img className="w-full h-full object-cover" alt={blog.title} src={blog.cover_image} />
                   </div>
-                  <div className="px-xs flex-grow">
+                  <div className="px-1 flex-grow">
                     <time className="text-label-sm text-outline uppercase">{new Date(blog.published_at).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</time>
-                    <h3 className="font-headline-md text-headline-md mt-sm mb-md leading-snug">{blog.title}</h3>
+                    <h3 className="font-headline-md text-headline-md mt-2 mb-3 leading-snug">{blog.title}</h3>
                     <p className="text-body-sm text-on-surface-variant line-clamp-2">{blog.summary}</p>
                   </div>
-                  <Link className="mt-lg px-xs py-sm border-t border-surface-variant flex items-center justify-between text-primary font-label-md group" href="/blog">
+                  <Link className="mt-6 pt-4 border-t border-outline-variant/30 flex items-center justify-between text-primary font-semibold text-sm group" href="/blog">
                     Read Article
-                    <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">chevron_right</span>
+                    <span className="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">chevron_right</span>
                   </Link>
                 </article>
               ))
@@ -414,17 +422,17 @@ export default function HomePage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-xxl px-gutter">
-        <div className="max-w-container-max mx-auto bg-primary rounded-3xl p-xl md:p-xxl relative overflow-hidden text-center text-white">
+      <section className="py-20 px-gutter">
+        <div className="max-w-container-max mx-auto bg-primary rounded-3xl p-8 md:p-16 relative overflow-hidden text-center text-white">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.1),transparent)]"></div>
-          <div className="relative z-10 space-y-lg max-w-2xl mx-auto">
+          <div className="relative z-10 space-y-6 max-w-2xl mx-auto">
             <h2 className="font-headline-lg text-headline-lg">Ready to Scale Your Digital Horizon?</h2>
             <p className="text-body-lg text-primary-fixed-dim">Partner with Noventra to transform your technological challenges into competitive advantages.</p>
-            <div className="flex flex-col md:flex-row gap-md justify-center pt-md">
-              <Link href="/contact" className="bg-white text-primary px-xxl py-md rounded-xl font-label-md hover:bg-surface-container transition-all">
+            <div className="flex flex-col md:flex-row gap-4 justify-center pt-6">
+              <Link href="/contact" className="bg-white text-primary px-8 py-3.5 rounded-xl font-semibold hover:bg-surface-container transition-all">
                 Book a Strategy Call
               </Link>
-              <Link href="/services" className="border border-white/30 px-xxl py-md rounded-xl font-label-md hover:bg-white/10 transition-all">
+              <Link href="/services" className="border border-white/30 px-8 py-3.5 rounded-xl font-semibold hover:bg-white/10 transition-all">
                 Explore Services
               </Link>
             </div>

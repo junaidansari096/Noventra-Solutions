@@ -110,40 +110,40 @@ export default function ServicesPage() {
   ];
 
   return (
-    <div className="min-h-screen pt-xxl">
+    <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="px-gutter pt-xxl pb-xl max-w-container-max mx-auto text-center">
-        <div className="inline-flex items-center px-sm py-xs bg-primary/10 rounded-full mb-md">
-          <span className="text-primary font-label-sm text-label-sm px-sm">EXPERTISE &amp; INNOVATION</span>
+      <section className="px-gutter pt-16 pb-8 max-w-container-max mx-auto text-center">
+        <div className="inline-flex items-center px-4 py-1 bg-primary/10 rounded-full mb-6">
+          <span className="text-primary font-semibold text-xs uppercase tracking-wider px-2">EXPERTISE &amp; INNOVATION</span>
         </div>
-        <h1 className="font-headline-lg text-headline-lg md:text-display-lg md:font-display-lg text-on-surface mb-md">
+        <h1 className="font-headline-lg text-headline-lg md:text-display-lg md:font-display-lg text-on-surface mb-4">
           Our Expertise
         </h1>
         <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
           Scalable solutions engineered for the modern enterprise. We bridge the gap between technical complexity and business velocity.
         </p>
       </section>
-
+ 
       {/* Services Grid */}
-      <section className="px-gutter pb-xxl max-w-container-max mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-xl">
+      <section className="px-gutter pb-20 max-w-container-max mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {(services.length > 0 ? services : defaultServices).map((service) => (
-            <div key={service.id} className="service-card group bg-surface-container-lowest border border-outline-variant/30 p-lg rounded-xl flex flex-col h-full hover:border-primary/50 hover:shadow-xl transition-all duration-300">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-lg group-hover:bg-primary transition-colors duration-300">
+            <div key={service.id} className="service-card group bg-surface-container-lowest border border-outline-variant/30 p-8 rounded-xl flex flex-col h-full hover:border-primary/50 hover:shadow-xl transition-all duration-300">
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors duration-300">
                 <span className="material-symbols-outlined text-primary group-hover:text-white transition-colors duration-300">
                   {getServiceIcon(service.icon)}
                 </span>
               </div>
-              <h3 className="font-headline-md text-headline-md text-on-surface mb-sm">{service.title}</h3>
-              <p className="font-body-md text-body-md text-on-surface-variant mb-xl flex-grow">
+              <h3 className="font-headline-md text-headline-md text-on-surface mb-2">{service.title}</h3>
+              <p className="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">
                 {service.description}
               </p>
               
               {service.features && service.features.length > 0 && (
-                <div className="mb-md">
-                  <ul className="space-y-1">
+                <div className="mb-4">
+                  <ul className="space-y-1.5">
                     {service.features.map((feat, idx) => (
-                      <li key={idx} className="flex items-center gap-xs font-body-sm text-xs text-on-surface-variant">
+                      <li key={idx} className="flex items-center gap-2 font-body-sm text-xs text-on-surface-variant">
                         <span className="material-symbols-outlined text-primary text-[14px]">check_circle</span>
                         {feat}
                       </li>
@@ -151,13 +151,13 @@ export default function ServicesPage() {
                   </ul>
                 </div>
               )}
-
-              <div className="pt-lg border-t border-outline-variant/20 flex flex-col gap-md">
+ 
+              <div className="pt-6 border-t border-outline-variant/20 flex flex-col gap-4">
                 <div className="flex justify-between items-center">
-                  <span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Rate</span>
+                  <span className="font-semibold text-xs text-on-surface-variant uppercase tracking-widest">Rate</span>
                   <span className="font-headline-md text-headline-md text-primary">{service.price_range}</span>
                 </div>
-                <Link href="/contact" className="w-full text-center py-sm border border-primary text-primary font-label-md text-label-md rounded-lg hover:bg-primary hover:text-white transition-all duration-300">
+                <Link href="/contact" className="w-full text-center py-2.5 border border-primary text-primary font-semibold text-sm rounded-lg hover:bg-primary hover:text-white transition-all duration-300">
                   Get Started
                 </Link>
               </div>
@@ -165,22 +165,22 @@ export default function ServicesPage() {
           ))}
         </div>
       </section>
-
+ 
       {/* Pricing Calculator */}
-      <section className="px-gutter pb-xxl max-w-container-max mx-auto">
-        <div className="bg-white border border-outline-variant rounded-2xl p-xl md:p-xxl shadow-sm">
-          <div className="max-w-xl mb-xl">
-            <span className="text-primary font-label-sm text-label-sm uppercase tracking-widest mb-xs inline-block">Cost Estimator</span>
-            <h2 className="font-headline-lg text-headline-lg text-on-surface mb-sm">Estimate Your Project</h2>
+      <section className="px-gutter pb-20 max-w-container-max mx-auto">
+        <div className="bg-white border border-outline-variant rounded-2xl p-8 md:p-12 shadow-sm">
+          <div className="max-w-xl mb-8">
+            <span className="text-primary font-semibold text-xs uppercase tracking-widest mb-2 inline-block">Cost Estimator</span>
+            <h2 className="font-headline-lg text-headline-lg text-on-surface mb-2">Estimate Your Project</h2>
             <p className="font-body-md text-on-surface-variant">Configure your development tier and cloud-management services below to calculate a baseline monthly estimation.</p>
           </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-xl">
+ 
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Options */}
-            <div className="space-y-lg">
+            <div className="space-y-6">
               <div>
-                <label className="block font-label-md text-on-surface mb-sm">Design &amp; Engineering Tier</label>
-                <div className="grid grid-cols-3 gap-sm">
+                <label className="block font-semibold text-sm text-on-surface mb-3">Design &amp; Engineering Tier</label>
+                <div className="grid grid-cols-3 gap-3">
                   {[
                     { id: "standard", label: "Standard", price: "$999" },
                     { id: "premium", label: "Premium", price: "$1,999" },
@@ -189,22 +189,22 @@ export default function ServicesPage() {
                     <button
                       key={tier.id}
                       onClick={() => setCalcTier(tier.id as any)}
-                      className={`p-md rounded-xl border text-center transition-all cursor-pointer ${
+                      className={`p-4 rounded-xl border text-center transition-all cursor-pointer ${
                         calcTier === tier.id
                           ? "bg-primary text-white border-primary shadow-lg shadow-primary/20"
                           : "bg-surface-container-lowest border-outline-variant hover:bg-surface-container-low"
                       }`}
                     >
-                      <div className="font-label-md font-bold">{tier.label}</div>
+                      <div className="font-semibold text-sm">{tier.label}</div>
                       <div className={`text-xs mt-1 ${calcTier === tier.id ? "text-white/80" : "text-on-surface-variant"}`}>{tier.price}</div>
                     </button>
                   ))}
                 </div>
               </div>
-
+ 
               <div>
-                <label className="block font-label-md text-on-surface mb-sm">Add-on Infrastructure Care</label>
-                <div className="space-y-sm">
+                <label className="block font-semibold text-sm text-on-surface mb-3">Add-on Infrastructure Care</label>
+                <div className="space-y-3">
                   {[
                     { id: "hosting", label: "Managed Cloud Hosting Setup", price: "+$29/mo" },
                     { id: "maintenance", label: "Monthly Caretaker Maintenance Support", price: "+$99/mo" },
@@ -212,32 +212,32 @@ export default function ServicesPage() {
                   ].map((addon) => (
                     <label
                       key={addon.id}
-                      className="flex items-center justify-between p-md rounded-xl border border-outline-variant/60 hover:bg-surface-container-low cursor-pointer transition-colors"
+                      className="flex items-center justify-between p-4 rounded-xl border border-outline-variant/60 hover:bg-surface-container-low cursor-pointer transition-colors"
                     >
-                      <div className="flex items-center gap-sm">
+                      <div className="flex items-center gap-3">
                         <input
                           type="checkbox"
                           checked={(calcAddons as any)[addon.id]}
                           onChange={(e) => setCalcAddons({ ...calcAddons, [addon.id]: e.target.checked })}
                           className="w-4 h-4 text-primary focus:ring-primary rounded border-outline-variant"
                         />
-                        <span className="font-body-md text-sm text-on-surface">{addon.label}</span>
+                        <span className="font-medium text-sm text-on-surface">{addon.label}</span>
                       </div>
-                      <span className="font-label-sm text-primary font-bold">{addon.price}</span>
+                      <span className="font-semibold text-sm text-primary">{addon.price}</span>
                     </label>
                   ))}
                 </div>
               </div>
             </div>
-
+ 
             {/* Result Display */}
-            <div className="bg-surface-container-low rounded-2xl p-xl flex flex-col justify-between items-center text-center">
-              <div className="space-y-xs">
-                <span className="font-label-sm text-on-surface-variant/80 uppercase tracking-wider">Baseline Project Quote</span>
-                <div className="text-display-lg font-display-lg text-primary leading-none py-md">${calculateTotal()}</div>
+            <div className="bg-surface-container-low rounded-2xl p-8 flex flex-col justify-between items-center text-center">
+              <div className="space-y-2">
+                <span className="font-semibold text-xs text-on-surface-variant/80 uppercase tracking-wider">Baseline Project Quote</span>
+                <div className="text-display-lg font-display-lg text-primary leading-none py-4">${calculateTotal()}</div>
                 <p className="font-body-sm text-xs text-on-surface-variant/75 max-w-sm">This estimation represents a baseline implementation code package. Actual enterprise SLA requirements will be customized during alignment calls.</p>
               </div>
-              <Link href="/contact" className="w-full mt-lg py-md bg-primary text-white font-label-md text-label-md rounded-xl hover:opacity-90 active:scale-95 transition-all shadow-lg shadow-primary/20">
+              <Link href="/contact" className="w-full mt-6 py-3 bg-primary text-white font-semibold text-sm rounded-xl hover:opacity-90 active:scale-95 transition-all shadow-lg shadow-primary/20">
                 Claim Quote &amp; Book Consultation
               </Link>
             </div>
