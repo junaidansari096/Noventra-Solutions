@@ -58,57 +58,6 @@ export default function ServicesPage() {
     }
   };
 
-  const defaultServices = [
-    {
-      id: 1,
-      title: "Website Development",
-      description: "High-performance marketing websites optimized for conversion, SEO, and lightning-fast loading speeds across all devices.",
-      price_range: "$2,500",
-      icon: "web",
-      features: ["Custom UI design", "SEO optimization", "Responsive layouts", "1-year tech support"]
-    },
-    {
-      id: 2,
-      title: "Web Applications",
-      description: "Complex SaaS platforms and custom internal tools built with robust architectures to handle scale and secure data management.",
-      price_range: "$7,500",
-      icon: "data_object",
-      features: ["Database integrations", "Advanced security keys", "Admin dashboards", "Scalable backend API"]
-    },
-    {
-      id: 3,
-      title: "Hosting Solutions",
-      description: "Fully managed, enterprise-grade hosting solutions with 99.9% uptime guarantee and daily automated backups for peace of mind.",
-      price_range: "$49/mo",
-      icon: "dns",
-      features: ["99.9% uptime SLA", "Daily automated backups", "DDoS protection", "Server maintenance"]
-    },
-    {
-      id: 4,
-      title: "Cloud Solutions",
-      description: "Infrastructure modernization via AWS, Azure, or GCP. Optimize your cloud spend and improve system reliability through DevOps.",
-      price_range: "$4,000",
-      icon: "cloud_done",
-      features: ["Kubernetes & Docker", "CI/CD automated pipelines", "Cloud security policies", "Performance tuning"]
-    },
-    {
-      id: 5,
-      title: "Branding Design",
-      description: "Visual identity systems designed for the digital age. We create logos, design systems, and brand guidelines that resonate.",
-      price_range: "$3,200",
-      icon: "architecture",
-      features: ["Logo design", "Color system definition", "Typography styling guidelines", "Asset production pack"]
-    },
-    {
-      id: 6,
-      title: "Technical Consulting",
-      description: "Expert guidance on stack selection, architectural audits, and digital transformation roadmaps tailored to your goals.",
-      price_range: "$150/hr",
-      icon: "psychology",
-      features: ["Stack assessment", "Architecture audit", "Technical strategy", "Expert mentoring"]
-    }
-  ];
-
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
@@ -123,11 +72,11 @@ export default function ServicesPage() {
           Scalable solutions engineered for the modern enterprise. We bridge the gap between technical complexity and business velocity.
         </p>
       </section>
- 
+
       {/* Services Grid */}
       <section className="px-gutter pb-20 max-w-container-max mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {(services.length > 0 ? services : defaultServices).map((service) => (
+          {services.map((service) => (
             <div key={service.id} className="service-card group bg-surface-container-lowest border border-outline-variant/30 p-8 rounded-xl flex flex-col h-full hover:border-primary/50 hover:shadow-xl transition-all duration-300">
               <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors duration-300">
                 <span className="material-symbols-outlined text-primary group-hover:text-white transition-colors duration-300">

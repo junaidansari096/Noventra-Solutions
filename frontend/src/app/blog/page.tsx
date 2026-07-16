@@ -33,40 +33,7 @@ export default function BlogPage() {
     });
   };
 
-  const defaultBlogs = [
-    {
-      id: 1,
-      title: "The Shift to Sovereign Clouds: Why Compliance Matters Now",
-      summary: "Exploring the geopolitical implications of data storage and why enterprises are moving away from public cloud monopolies.",
-      content: "As governments worldwide tighten restrictions on where citizen data can reside, sovereign clouds are rapidly transitioning from niche solutions to mainstream enterprise requirements. Public cloud monopolies are no longer sufficient for industries dealing with highly sensitive financial, healthcare, or municipal data.\n\nSovereign clouds solve this by ensuring compliance with localized data protection rules (such as GDPR in Europe) while retaining the scalability of modern cloud platforms. Over the next decade, we expect a major shift in how CTOs architect multi-cloud infrastructure to prioritize national and regional data residency.",
-      cover_image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDqwVmFR5btxrCDbxsO9XQA9lAT9cQbFCZZ1q2WMJjAxfRt_kkUL9Bd7wXbVmYu7yMgWc19Ze9eb3HDs5wIWqQI1lH4UIhi85jUI9GxbOlY9PcQIJx-t-2uKRhv2QrDiyfhg1ZGXHQDQ7tAWsaLauNTGzeuIHZLAER41Cs1X8YlGRqEKjmPDMEhaXMhiH8Md78AA0kj_s7yjrP3rVgasobLT7JCju62mQMkebz2bBX7lOkiySnX1YJ-2A",
-      author_name: "Sarah Chen",
-      tags: ["Cloud Compliance", "DevOps", "Enterprise"],
-      published_at: "2024-03-12T00:00:00Z"
-    },
-    {
-      id: 2,
-      title: "Generative AI in the Enterprise: Beyond the Hype",
-      summary: "A pragmatic guide for CTOs on integrating large language models without compromising corporate security.",
-      content: "While artificial intelligence continues to dominate boardroom discussions, many organizations struggle to move from experimental sandboxes to secure, production-ready enterprise applications.\n\nThe main issue is data leakage. Directing sensitive corporate data to third-party public models is a security liability. To build confidence, enterprises are adopting local, hosted LLMs that interact securely with closed company databases through Retrieval-Augmented Generation (RAG). By focusing on privacy and model validation, enterprises can harvest real automation benefits without risking intellectual property breaches.",
-      cover_image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCluaeSCiuT-_3h5m5Q-9AdjpVNkqY3Lco7xkgb5qli97-RgfxxeWUb29OJdLl8VeWoxN-0DyTYtlgJey2bNf-CtEjdNIP74nyFuXXJhPp3JcPZgKwDuQnbBPvrjK3GwlBd4i0YbLzQgnZhCpmJSj2mN5mY1h76dbPJQdEn5hslB3fc4jR4ZGodHkTrOFyWqyScXpEWQODeiyR8hWIEvPi5_9YvqbdC3zGGLED2HQ9QK0dKOd2hUcjTEA",
-      author_name: "Marcus Vance",
-      tags: ["Artificial Intelligence", "Security", "SaaS Strategy"],
-      published_at: "2024-02-28T00:00:00Z"
-    },
-    {
-      id: 3,
-      title: "Design as a Performance Metric: UI/UX in SaaS",
-      summary: "How refined user experience directly impacts retention rates and long-term customer lifetime value in B2B software.",
-      content: "Historically, enterprise software has prioritised features over form. However, a major shift is underway. Today's B2B clients demand the same ease-of-use and visual delight that they experience in B2C apps.\n\nGood UI/UX is no longer just aesthetic; it's a performance metric. Streamlined user paths directly reduce user errors, decrease onboarding training costs, and increase retention rates. When B2B software is delightful and intuitive, users stick around longer, positively impacting client lifetime value.",
-      cover_image: "https://lh3.googleusercontent.com/aida-public/AB6AXuA2ylHT_3wkVlq-5LZKE3QTT7HvePyFo2oGnHMLEQysgdqyRvlhdiex7lOCutP7QsBEddToe3-9ZIXq6dnfza9cOP7drkaAQE1hd6nZVto6lOaR6ODFa4CucwJzq4x5zOj8PUs3nw9rt75iI5QI591iutDMhxbWqSRKNTqaVYMP4xqWPO9iX5wacYhEUhkV5h6ouSGjFNWCeeapitMKFz_GlNGOZLwSxZV3epvwa-AbQepEBViE7TIWOw",
-      author_name: "Elena Rostova",
-      tags: ["UI Design System", "SaaS Growth", "User Experience"],
-      published_at: "2024-02-15T00:00:00Z"
-    }
-  ];
-
-  const displayBlogs = blogs.length > 0 ? blogs : defaultBlogs;
+  const displayBlogs = blogs;
 
   return (
     <div className="min-h-screen pt-xxl bg-background text-on-background">

@@ -37,77 +37,12 @@ export default function PortfolioPage() {
     return matchesCategory && matchesSearch;
   });
 
-  const defaultProjects = [
-    {
-      id: 1,
-      title: "Nexus Global Banking",
-      category: "Corporate",
-      description: "Next-gen wealth management platform focused on transparency and security.",
-      image_url: "https://lh3.googleusercontent.com/aida-public/AB6AXuCk1zyrHOh7_SSQOm0_Ax6d3b_NGz8SE5uwy0AVj-sZUp7b9rrihRsfyi0Gmsz7Nt0bI9xkLG_FA4hrg_fu0H-YGWndlFIiOcLAG_tuG29G7XACPSjFfw0ztYqegTHcuWdBnz-pTfClfqWLb6POV416jZueIW4K8jp3LC74tuya-YCR2QdKnN-ofjI9GFaGFFNg0gu3lqNdrLgkh9VKSwEX3rs5XlPT8tQYcG4e2lqvs6vxk44HfjL9JQ",
-      preview_url: "#",
-      tech_stack: ["Next.js", "FastAPI", "PostgreSQL", "TailwindCSS"],
-      client_name: "Nexus Global",
-      featured: true
-    },
-    {
-      id: 2,
-      title: "Lumière Boutique",
-      category: "E-commerce",
-      description: "Immersive direct-to-consumer experience with real-time inventory sync.",
-      image_url: "https://lh3.googleusercontent.com/aida-public/AB6AXuB9fBOuqkqNPlfa_QaQYpAN2GndsNolkzHqVByJC5zl-bhNE_FEcblH2Ea8f1crY4u2R6cvHVnLTY05b_qD7B8f8BvhRifMPXzp3YtnwNfzYiX61UGpXyaLG2HhSgsaMgMA0161paznyfjm51NWVhvu6-hcOaedtn2zU7B6joMwWE_KLK6qa8Wb1eW8RPAGTruWIGNLIjgkB6gmvqT5hhL7zh3T_6ayHIfXBBMrffxFDlxpuIzFaIQ1bw",
-      preview_url: "#",
-      tech_stack: ["React", "Node.js", "Shopify GraphQL API", "TailwindCSS"],
-      client_name: "Lumière Fashion Group",
-      featured: true
-    },
-    {
-      id: 3,
-      title: "FlowState Analytics",
-      category: "Startup",
-      description: "Unified data dashboard for agile marketing teams and growth specialists.",
-      image_url: "https://lh3.googleusercontent.com/aida-public/AB6AXuD3IC0fnYsKYB2RWDdNQAm4KOl0Qwmb3UTqssLZKgf3aghO4hnGff6sopxV1NBedrCsXCSBlvyzhK2dqIDMKL5o1GpgNd9zt0v2l3tx_nZ20FK0Ff9mpiiKa3f4Eqj-4-l_MsDzWRZJh4dZEyB2zr-f3LZFlxtqf-Gnj9GDXxzmC_RyomMM5DNUbS--Uxjs5IVZir0Oo7cQrdVGxdaQ0hNt8r3T6bjcdkW-fkAp9HCzlgrt3ClC8cJxqQ",
-      preview_url: "#",
-      tech_stack: ["Vite", "FastAPI", "Redis", "Chart.js"],
-      client_name: "FlowState Inc.",
-      featured: true
-    },
-    {
-      id: 4,
-      title: "Aether Cloud Infrastructure",
-      category: "Tech",
-      description: "Enterprise-grade cloud orchestration tool for global data centers.",
-      image_url: "https://lh3.googleusercontent.com/aida-public/AB6AXuAC_R5emedeu-44oBAd8_cbsbcgxF_JyvEYrI9mg6n37GUPuDaYp3l5PK7LI4-BsF2UcGO0oTd4Q3rk7DWRaDXsYcSOn4r-ADOUIpQE-w252RZXzW1wrXY7mW_opl8dtNwrz9tjmwKCw4UXOie1fwePBxoQmhiVYJYy60EpiET_VBdi5iW5OvWqDDWYgSjwGlcKxgJ4Wt7HCMXWQ1Chyhb0x7iOpF4pPexoXjoK7zGjOKwDj3Zic38wyw",
-      preview_url: "#",
-      tech_stack: ["Go", "Kubernetes", "React", "gRPC"],
-      client_name: "Aether Systems",
-      featured: true
-    },
-    {
-      id: 5,
-      title: "GreenPeak Energy",
-      category: "Corporate",
-      description: "Interactive sustainability portal demonstrating global environmental impact.",
-      image_url: "https://lh3.googleusercontent.com/aida-public/AB6AXuBr3zmd_aifnMNP0ZZpAg-YLy51VYCvXUtDjfWCLvRlGOEejIH-y9vrmjwn-BykA750LxZjD4e4rHjXQS3iD2K08vOb3u6jYZRvcn9Yh1IPHgMPJ8WlXBmhozn-9soNI-pbqal3tMKefxiPFX40a48rVNblqchcmIM3LPia_40VeLLqn1bTIbPP4DZpQi7C5F_lyr0VTfqC7YX2WURVNDT0fENqmsa8LWFj6P3EUc7HfQI5ScNFCoFy8w",
-      preview_url: "#",
-      tech_stack: ["Next.js", "D3.js", "FastAPI", "S3"],
-      client_name: "GreenPeak Energy Corp",
-      featured: true
-    }
-  ];
-
   const categories = Array.from(new Set([
     "All",
-    ...projects.map((p) => p.category),
-    ...defaultProjects.map((p) => p.category)
+    ...projects.map((p) => p.category)
   ]));
 
-  const displayProjects = projects.length > 0 ? filteredProjects : defaultProjects.filter((p) => {
-    const matchesCategory = filterCategory === "All" || p.category.toLowerCase() === filterCategory.toLowerCase();
-    const matchesSearch = p.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                          p.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          p.tech_stack.some(t => t.toLowerCase().includes(searchQuery.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
+  const displayProjects = filteredProjects;
 
   return (
     <div className="min-h-screen pt-20 bg-background">
